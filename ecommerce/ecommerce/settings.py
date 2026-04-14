@@ -82,7 +82,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'user@qst',
         'PORT': '3306',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
+        
     }
 }
 
