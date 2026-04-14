@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'genzkart',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'user@qst',
-        'PORT': '3306',
+        'NAME': os.getenv('genzkart'),
+        'HOST': os.getenv('localhost'),
+        'USER': os.getenv('root'),
+        'PASSWORD': os.getenv('user@qst'),
+        'PORT': os.getenv('3306'),
         
     }
 }
