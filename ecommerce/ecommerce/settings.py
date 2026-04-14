@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -73,19 +74,22 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+# Sabse upar check karlo ye hai na:
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('genzkart'),
-        'HOST': os.getenv('localhost'),
-        'USER': os.getenv('root'),
-        'PASSWORD': os.getenv('user@qst'),
-        'PORT': os.getenv('3306'),
-        
+        'NAME': os.getenv('DB_NAME'),        # Ye '.env' se 'genzkart' uthayega
+        'USER': os.getenv('DB_USER'),        # Ye 'root' uthayega
+        'PASSWORD': os.getenv('DB_PASSWORD'), # Ye 'xyzzzzzz123' uthayega
+        'HOST': os.getenv('DB_HOST'),        # Ye 'localhost' uthayega
+        'PORT': os.getenv('DB_PORT'),        # Ye '3306' uthayega
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
