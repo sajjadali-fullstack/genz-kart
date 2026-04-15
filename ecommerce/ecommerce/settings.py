@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DB_NAME'),        # Ye '.env' se 'genzkart' uthayega
         'USER': os.getenv('DB_USER'),        # Ye 'root' uthayega
-        'PASSWORD': os.getenv('DB_PASSWORD'), # Ye 'xyzzzzzz123' uthayega
+        'PASSWORD': os.getenv('DB_PASSWORD'), # Ye 'password' uthayega
         'HOST': os.getenv('DB_HOST'),        # Ye 'localhost' uthayega
-        'PORT': os.getenv('DB_PORT'),        # Ye '3306' uthayega
+        'PORT': os.getenv('DB_PORT'),        # Ye 'port_number' uthayega
     }
 }
 
@@ -131,3 +131,4 @@ MEDIA_URL = '/images/'
 
 MEDIA_ROOT = BASE_DIR / 'static'
 
+STATICFILES_DIRS = [BASE_DIR / 'static']

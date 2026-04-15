@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Page</title>
+    {% block 'styleBlock' %}
+    <style>
+        .responsive-banner {
+            /* Desktop height */
+            height: 500px;
+            object-fit: cover;
+            /* Isse image stretch nahi hogi, sides se crop hogi */
+            object-position: center;
+            /* Image ka center part dikhega */
+        }
+
+        /* Mobile ke liye height thodi kam kar dete hain */
+        @media (max-width: 768px) {
+            .responsive-banner {
+                height: 250px;
+                /* Mobile par 400px bahut zyada bada dikhta hai */
+            }
+        }
+    </style>
+    {% endblock 'styleBlock' %}
+
+</head>
+
+<body>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/banner2.png' %}" class="d-block w-100 responsive-banner" alt="Bahubhali">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner3.png' %}" class="d-block w-100 responsive-banner" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/banner4.png' %}" class="d-block w-100 responsive-banner" alt="...">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</body>
+
+</html>

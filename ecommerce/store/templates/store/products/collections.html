@@ -1,0 +1,67 @@
+{% extends 'store/layouts/base.html' %}
+
+{% block titleBlock %}
+<title>Collections</title>
+{% endblock titleBlock %}
+
+{% block styleBlock %}
+<style>
+    /* Desktop par hover effect dene ke liye */
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Mobile par button aur text size handle karne ke liye */
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 0.8rem !important;
+        }
+
+        .btn-sm {
+            padding: 5px 2px;
+            font-size: 0.7rem !important;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+
+{% block contentBlock %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Collections</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row g-2 g-md-3"> {% for item in category %}
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; transition: transform 0.2s;">
+
+                <div
+                    style="aspect-ratio: 1/1; overflow: hidden; background-color: #fdfdfd; display: flex; align-items: center; justify-content: center;">
+                    {% if item.image %}
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" class="w-100 h-100"
+                        style="object-fit: contain; padding: 12px;">
+                    {% else %}
+                    <img src="https://via.placeholder.com/300" class="w-100 h-100" style="object-fit: cover;">
+                    {% endif %}
+                </div>
+
+                <div class="card-body p-2 p-md-3 text-center">
+                    <h6 class="card-title text-dark fw-bold text-truncate" title="{{ item.name }}"
+                        style="font-size: 0.9rem;">
+                        {{ item.name }}
+                    </h6>
+                    <a href="#" class="btn btn-sm btn-primary w-100 mt-2"
+                        style="font-size: 0.8rem; border-radius: 5px;">
+                        View All
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock contentBlock %}

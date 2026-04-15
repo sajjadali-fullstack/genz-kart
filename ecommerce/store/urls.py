@@ -2,7 +2,8 @@ from django.urls import path
 from store import views
 
 urlpatterns = [
-    path('home/', views.home_view, name='home'),
+    path('', views.home_view, name='home'),
+    path('collections/', views.collections_view, name='collections'),
     # Category level: mysite.com/collections/goats/
     # path('collections/<str:cate_slug>', views.view_category, name="view_category"),
 
