@@ -15,7 +15,7 @@ GenZKart ek industry-level e-commerce application hai jise Django framework ka u
 
 ## 🛠️ Tech Stack
 <br.
-* **Backend:** <img src="https://skillicons.dev/icons?i=python,django" height="50"/> <br>
+* **Backend:** - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20"/> <br>
 * **Frontend:** <img src="https://skillicons.dev/icons?i=html,css,bootstrap" height="50"/> <br>
 * **Database:** <img src="https://skillicons.dev/icons?i=mysql" height="50"/> <br>
 
