@@ -13,15 +13,18 @@ We welcome contributions, feedback, suggestions, and ideas — feel free to shar
 ## 📝 Project Overview
 GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai.
 
+---
 ## 🛠️ Tech Stack
-<br.
-* **Backend:** - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40"/>
+
+* **Backend:** - &nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40"/>
 &nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="40"/> <br>
-* **Frontend:** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="50"/> <br>
+* **Frontend:** - &nbsp; <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="50"/> <br>
-* **Database:** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40"/> <br>
+* **Database:** - &nbsp;  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="50"/> <br>
+
+---
 
 ## 💖 Support & Usage
 If you find this project helpful or plan to use it as a template for your learning, please consider:
