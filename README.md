@@ -1,16 +1,36 @@
-# 🚀 GenZKart - Django E-commerce Platform
+# 🚀 GenZKart - Django E-commerce Platform---
+---
+<h1 align="center">🚧 Work in Progress 🚧</h1>
 
-> **⚠️ ATTENTION:** If you are using this code for your project or learning from it, please **Star ⭐** this repository. It’s a small way to say thanks to the creator!
+This project is actively being developed and is not yet complete.  
+We welcome contributions, feedback, suggestions, and ideas — feel free to share them!
+---
+
+> **⚠️ ATTENTION:** If you are using this code for your project or learning from it, **Star ⭐** this repository. It’s a small way to say thanks to the creator!
 
 ---
 
 ## 📝 Project Overview
 GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai.
 
+---
 ## 🛠️ Tech Stack
-* **Backend:** Python & Django
-* **Frontend:** HTML5, CSS3, Bootstrap 5
-* **Database:** SQLite3 (Development)
+
+* **Backend:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="50"/>
+
+* **Frontend:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="50"/>
+
+* **Database:**  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="50"/>
+---
 
 ## 💖 Support & Usage
 If you find this project helpful or plan to use it as a template for your learning, please consider:
