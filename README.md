@@ -1,8 +1,9 @@
-# 🚀 GenZKart - Django E-commerce Platform
+# 🚀 GenZKart - Django E-commerce Platform---
 ---
 <h1 align="center">🚧 Work in Progress 🚧</h1>
 
-This project is actively being developed and is not yet complete. Feel free to share your contributions, feedback, suggestions, or ideas!
+This project is actively being developed and is not yet complete.  
+We welcome contributions, feedback, suggestions, and ideas — feel free to share them!
 ---
 
 > **⚠️ ATTENTION:** If you are using this code for your project or learning from it, **Star ⭐** this repository. It’s a small way to say thanks to the creator!
