@@ -14,9 +14,10 @@ We welcome contributions, feedback, suggestions, and ideas — feel free to shar
 GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai.
 
 ## 🛠️ Tech Stack
-* **Backend:** <img src="https://skillicons.dev/icons?i=python,django" height="60"/>
-* **Frontend:** <img src="https://skillicons.dev/icons?i=html,css,bootstrap" height="60"/>
-* **Database:** <img src="https://skillicons.dev/icons?i=mysql" height="60"/>
+<br.
+* **Backend:** <img src="https://skillicons.dev/icons?i=python,django" height="50"/> <br>
+* **Frontend:** <img src="https://skillicons.dev/icons?i=html,css,bootstrap" height="50"/> <br>
+* **Database:** <img src="https://skillicons.dev/icons?i=mysql" height="50"/> <br>
 
 ## 💖 Support & Usage
 If you find this project helpful or plan to use it as a template for your learning, please consider:
