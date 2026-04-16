@@ -1,6 +1,11 @@
 # 🚀 GenZKart - Django E-commerce Platform
+---
+<h1 align="center">🚧 Work in Progress 🚧</h1>
 
-> **⚠️ ATTENTION:** If you are using this code for your project or learning from it, please **Star ⭐** this repository. It’s a small way to say thanks to the creator!
+This project is actively being developed and is not yet complete. Feel free to share your contributions, feedback, suggestions, or ideas!
+---
+
+> **⚠️ ATTENTION:** If you are using this code for your project or learning from it, **Star ⭐** this repository. It’s a small way to say thanks to the creator!
 
 ---
 
@@ -8,9 +13,9 @@
 GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai.
 
 ## 🛠️ Tech Stack
-* **Backend:** Python & Django
-* **Frontend:** HTML5, CSS3, Bootstrap 5
-* **Database:** SQLite3 (Development)
+* **Backend:** <img src="https://skillicons.dev/icons?i=python,django" height="60"/>
+* **Frontend:** <img src="https://skillicons.dev/icons?i=html,css,bootstrap" height="60"/>
+* **Database:** <img src="https://skillicons.dev/icons?i=mysql" height="60"/>
 
 ## 💖 Support & Usage
 If you find this project helpful or plan to use it as a template for your learning, please consider:
