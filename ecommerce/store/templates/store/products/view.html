@@ -1,0 +1,54 @@
+{% extends 'store/layouts/base.html' %}
+
+<!-- Title Block -->
+{% block titleBlock %}
+<title>Collections</title>
+{% endblock titleBlock %}
+
+<!-- Style Block -->
+{% block styleBlock %}
+<style>
+    /* Desktop par hover effect dene ke liye */
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Mobile par button aur text size handle karne ke liye */
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 0.8rem !important;
+        }
+
+        .btn-sm {
+            padding: 5px 2px;
+            font-size: 0.7rem !important;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+<!-- Content Block -->
+{% block contentBlock %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a href="{%  url 'home' %}" class="text-white">Home / </a>
+        <a href="{% url 'collections' %}" class="text-white">Collection</a>
+
+
+    </div>
+</div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">{{ category_name.name }}</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row g-2 g-md-3">
+        
+    </div>
+    {% endblock contentBlock %}
