@@ -1,8 +1,10 @@
 {% extends 'store/layouts/base.html' %}
 
+
+
 <!-- Title Block -->
 {% block titleBlock %}
-<title>Collections</title>
+<title>View</title>
 {% endblock titleBlock %}
 
 <!-- Style Block -->
@@ -25,6 +27,30 @@
             font-size: 0.7rem !important;
         }
     }
+
+    /* Mobile ke upar wala tag */
+    .product-viewtag {
+        position: absolute;
+        /* Image ke upar lane ke liye */
+        top: 10px;
+        /* Thoda upar se gap */
+        left: 10px;
+        /* Thoda left se gap */
+        z-index: 10;
+        /* Taaki image ke niche na dabe */
+        padding: 5px 10px;
+        /* Badge ka size thoda bada dikhe */
+        font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+        .product-viewtag {
+            font-size: 12px;
+            padding: 3px 7px;
+            top: 5px;
+            left: 5px;
+        }
+    }
 </style>
 {% endblock styleBlock %}
 
@@ -33,22 +59,114 @@
 
 <div class="py-3 bg-primary">
     <div class="container">
-        <a href="{%  url 'home' %}" class="text-white">Home / </a>
-        <a href="{% url 'collections' %}" class="text-white">Collection</a>
+        <a href="{%  url 'home' %}" class="text-white text-decoration-none fw-bold">Home / </a>
+        <a href="{% url 'collections' %}" class="text-white text-decoration-none fw-bold">Collection /</a>
+        <a href="{% url 'collectionsView' products.category.slug %}" class="text-white text-decoration-none fw-bold">{{
+            products.category.name }} / </a>
+        <a href="{% url 'product_details' products.category.slug products.slug %}"
+            class="text-white text-decoration-none fw-bold border-bottom border-2">{{ products.name }}</a>
 
 
     </div>
+
 </div>
 
-<div class="container py-4">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="mb-4">{{ category_name.name }}</h1>
-            <hr>
+
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Product ke upar jo tag hai vo hai ye -->
+                            <div class="position-relative"> {% if products.tag %}
+                                <label class="badge bg-danger product-viewtag">Hot</label>
+                                {% endif %}
+                                <img src="{{ products.product_image.url }}" class="w-100 img-fluid rounded" alt="image">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="mb-0">
+                                {{ products.name }}
+                                {% if products.trending %}
+                                <label style="font-size: 16px;"
+                                    class="float-end badge bg-danger trending_tag">Trending</label>
+                                {% endif %}
+                            </h2>
+                            <hr>
+                            <label class="me-3">
+                                Original Price : <s>Rs {{ products.original_price | stringformat:".2f" }}</s>
+                            </label>
+
+                            <label class="fw-bold text-success">
+                                Selling Price : Rs {{ products.selling_price | stringformat:".2f" }}
+                            </label>
+                            <p class="mt-3">{{ products.small_description }}</p>
+                            <hr>
+                            {% if products.quantity > 0 %}
+                            <label class="badge bg-success">In Stock</label>
+                            {% else %}
+                            <label class="badge bg-danger">Out of Stock</label>
+                            {% endif %}
+                            <!-- <hr> -->
+                            <div class="row mt-2">
+                                <div class="col-md-3">
+                                    <label for="Quantity" class="me-3">Quantity : </label>
+                                    <!-- <input type="number" class="form-control" value="{{ products.quantity }}" min="0" max="{{ products.quantity }}" step="1" id="quantity"> -->
+                                    <div class="input-group text-center mb-3" style="width: 130px;">
+                                        <button class="input-group-text decrement-btn">-</button>
+                                        <input type="text" name="quantity" class="form-control text-center" value="1">
+                                        <button class="input-group-text increment-btn">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9 pt-4">
+                                    {% if products.quantity > 0 %}
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button type="button" class="btn btn-primary me-md-2">
+                                            Add to Cart <i class="fa fa-shopping-cart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-success">
+                                            Add to Wishlist <i class="fa fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    {% else %}
+                                    <div class="d-grid d-md-block">
+                                        <button type="button" class="btn btn-success">
+                                            Add to Wishlist <i class="fa fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <hr>
+                    <!-- Description -->
+                   <div class="col-md-12">
+    <hr>
+    <h3 class="fw-bold mb-3" style="color: #2c3e50; border-left: 5px solid #0d6efd; padding-left: 15px;">Description</h3>
+    <div class="p-3 bg-light rounded shadow-sm mt-3">
+        <p style="line-height: 1.6; color: #444;">
+            {{ products.description | safe }}
+        </p>
+    </div>
+</div>
+                </div>
+
+            </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
 
-    <div class="row g-2 g-md-3">
-        
-    </div>
-    {% endblock contentBlock %}
+{% endblock contentBlock %}
+
+

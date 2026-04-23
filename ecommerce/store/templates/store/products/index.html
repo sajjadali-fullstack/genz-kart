@@ -2,7 +2,7 @@
 
 <!-- Title Block -->
 {% block titleBlock %}
-<title>Collections</title>
+<title>Index</title>
 {% endblock titleBlock %}
 
 <!-- Style Block -->
@@ -33,9 +33,9 @@
 
 <div class="py-3 bg-primary">
     <div class="container">
-        <a href="{%  url 'home' %}" class="text-white">Home / </a>
-        <a href="{% url 'collections' %}" class="text-white">Collection</a>
-
+        <a href="{%  url 'home' %}" class="text-white text-decoration-none fw-bold">Home /</a>
+        <a href="{% url 'collections' %}" class="text-white text-decoration-none fw-bold">Collection/</a>
+        <a href="{% url 'collectionsView' category_name.slug %}" class="text-white text-decoration-none fw-bold border-bottom border-2">{{ category_name}}</a>
 
     </div>
 </div>
@@ -52,7 +52,8 @@
         {% for item in products %}
         <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; transition: transform 0.2s;">
-                <a href="{% url 'collectionsView' item.slug %}">
+                <!-- <a href="{% url 'collectionsView' item.slug %}"> -->
+                    <a href="{% url 'product_details' item.category.slug item.slug %}" class="text-decoration-none">
                     <div
                         style="aspect-ratio: 1/1; overflow: hidden; background-color: #fdfdfd; display: flex; align-items: center; justify-content: center;">
                         {% if item.product_image %}
@@ -80,7 +81,7 @@
                             SAVE BIG!
                         </div>
                         <!-- View Button -->
-                        <a href="#" class="btn btn-sm btn-primary w-100 mt-2"
+                        <a href="{% url 'product_details' item.category.slug item.slug %}" class="btn btn-sm btn-primary w-100 mt-2"
                             style="font-size: 0.8rem; border-radius: 5px;">
                             View
                         </a>
