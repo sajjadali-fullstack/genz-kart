@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +53,11 @@
     {% block scriptsBlock %}
     <p>scripts come from base</p>
     {% endblock scriptsBlock %}
+
+<!-- Jquery Increment or decrement -->
+    <script src="{% static '/js/jquery-3.7.1.min.js' %}"></script>
+    <!-- Custom JS -->
+    <script src="{% static '/js/custom.js' %}"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
