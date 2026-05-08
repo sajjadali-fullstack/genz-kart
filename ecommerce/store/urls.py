@@ -1,5 +1,7 @@
 from django.urls import path
 from store import views
+from store.controller import auth_views   # For login / logout
+
 
 urlpatterns = [
     path('', views.home_view, name='home'),
@@ -10,4 +12,7 @@ urlpatterns = [
 
     # Product level: mysite.com/collections/goats/totapari-bakra/
     path('collections/<str:cate_slug>/<str:prod_slug>', views.product_details_view, name="product_details"),
+
+    # for login / logout
+    path('register/', auth_views.register_view, name='register' )
 ]

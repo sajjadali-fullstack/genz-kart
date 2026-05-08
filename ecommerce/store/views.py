@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from store.models import Category, Product
 from django.contrib import messages 
+
+
 # Create your Business logic / views here 👇.
 
 # 1. Home View
@@ -26,7 +28,7 @@ def category_view(request, slug):
         return redirect('collections')
     
 
-
+# Product details
 def product_details_view(request, cate_slug, prod_slug):
     if(Category.objects.filter(slug=cate_slug, status=0)):
         if(Product.objects.filter(slug=prod_slug, status=0)):
