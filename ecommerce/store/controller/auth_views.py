@@ -4,6 +4,7 @@ from django.contrib import messages
 
 # Create your Login, Logout / views here 👇.
 
+# Registration
 def register_view(request):
     form = CustomUserForm()
     if request.method == 'POST':
@@ -16,5 +17,7 @@ def register_view(request):
     context = {'form':form}
     return render(request, 'store/auth/register.html', context)
 
+# Login 
 def login_page_view(request):
     return render(request, 'store/auth/login.html')
+
