@@ -14,6 +14,8 @@ urlpatterns = [
     path('collections/<str:cate_slug>/<str:prod_slug>', views.product_details_view, name="product_details"),
 
     # For: registration / login / logout
-    path('register/', auth_views.register_view, name='register' ),
-    path('login/', auth_views.login_page_view, name='login' ),
+    path('register/', auth_views.register_view, name='register'),
+    path('login/', auth_views.login_page_view, name='login'),
+    path('logout/', auth_views.logout_page_view, name='logout'),
+
 ]
