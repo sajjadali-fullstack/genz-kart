@@ -22,7 +22,7 @@ def register_view(request):
 def login_page_view(request):
 
     if request.user.is_authenticated:  # If u r login try to do --> http://localhost:8000/login/ so hey will not accept 
-        messages.warning(request, "You are already loged in")
+        messages.warning(request, "You are already loged in!")
         return redirect("/") 
     else:
 
@@ -34,7 +34,7 @@ def login_page_view(request):
 
             if user is not None:
                 login(request, user)
-                messages.success(request, "Loged In Sucessfully")
+                messages.success(request, "Loged In Sucessfully!")
                 return redirect('/')
             
             else:
