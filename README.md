@@ -11,9 +11,40 @@ We welcome contributions, feedback, suggestions, and ideas — feel free to shar
 ---
 
 ## 📝 Project Overview
-GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai.
+GenZKart ek industry-level e-commerce application hai jise Django framework ka use karke banaya gaya hai. Isme clean code architecture, template inheritance, aur professional business logic ka use kiya gaya hai. <br>
+GenZKart is a professional e-commerce web application built using Django. It uses clean code structure, template inheritance, and proper business logic to keep the project organized and scalable.
+
+## 🖼️ Project Screenshots
+
+### 🏠 Home Page
+![Home Page](#)
 
 ---
+
+### 🛍️ Collection Page
+![Collection Page](#)
+
+---
+
+### 🛒 Add to Cart Page
+![Add to Cart](#)
+
+---
+
+### 📦 Product Detail Page
+![Product Detail](#)
+
+---
+
+### 🔍 Search / Filter Page
+![Search Page](#)
+
+## 🎥 Demo Preview
+
+![Demo](#)
+
+---
+
 ## 🛠️ Tech Stack
 
 * **Backend:**  

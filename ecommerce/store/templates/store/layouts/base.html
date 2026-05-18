@@ -73,17 +73,20 @@
 
     <!-- Alertify JS CDN for pop up alert -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
-
+    {% block alertifyBlock %}
     <script>
         alertify.set('notifier', 'position', 'top-right');
-        
-        {% for msg in messages %}
-        
-        alertify.success('{{ msg }}');
-        
-        {% endfor %}
-    </script>
 
+        {% for msg in messages %}
+        {% if msg.tags == "error" %}
+        alertify.error("{{ msg|escapejs }}");
+        {% else %}
+        alertify.success("{{ msg|escapejs }}");
+        {% endif %}
+        {% endfor %}
+
+    </script>
+    {% endblock alertifyBlock %}
 </body>
 
 </html>
