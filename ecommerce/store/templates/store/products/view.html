@@ -119,15 +119,18 @@
                                     <!-- <input type="number" class="form-control" value="{{ products.quantity }}" min="0" max="{{ products.quantity }}" step="1" id="quantity"> -->
                                     <div class="input-group text-center mb-3" style="width: 130px;">
                                         <button class="input-group-text decrement-btn">-</button>
-                                        <input type="text" name="quantity" class="form-control text-center qty-input" value="1">
+                                        <input type="text" name="quantity" class="form-control text-center qty-input"
+                                            value="1">
                                         <button class="input-group-text increment-btn">+</button>
                                     </div>
                                 </div>
-<!-- ADD TO CART -->
+                                
+                                <!-- ADD TO CART -->
                                 <div class="col-md-9 pt-4">
                                     {% if products.quantity > 0 %}
                                     <div class="d-grid gap-2 d-md-block">
-                                        <button type="button" class="btn btn-primary me-md-2 addToCartBtn">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                                        <button type="button" class="btn btn-primary me-md-2 addToCartBtn">Add to Cart
+                                            <i class="fa fa-shopping-cart"></i></button>
                                         <button type="button" class="btn btn-success">
                                             Add to Wishlist <i class="fa fa-heart"></i>
                                         </button>
@@ -148,15 +151,16 @@
                 <div class="col-md-12 mt-4">
                     <hr>
                     <!-- Description -->
-                   <div class="col-md-12">
-    <hr>
-    <h3 class="fw-bold mb-3" style="color: #2c3e50; border-left: 5px solid #0d6efd; padding-left: 15px;">Description</h3>
-    <div class="p-3 bg-light rounded shadow-sm mt-3">
-        <p style="line-height: 1.6; color: #444;">
-            {{ products.description | safe }}
-        </p>
-    </div>
-</div>
+                    <div class="col-md-12">
+                        <hr>
+                        <h3 class="fw-bold mb-3"
+                            style="color: #2c3e50; border-left: 5px solid #0d6efd; padding-left: 15px;">Description</h3>
+                        <div class="p-3 bg-light rounded shadow-sm mt-3">
+                            <p style="line-height: 1.6; color: #444;">
+                                {{ products.description | safe }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -168,5 +172,3 @@
 </div>
 
 {% endblock contentBlock %}
-
-
