@@ -6,6 +6,7 @@ from store.models import Product,Cart
 from django.http import JsonResponse
 
 
+# Add To Cart
 def add_to_cart_view(request):
     if request.method == 'POST':
         if request.user.is_authenticated:
@@ -32,3 +33,15 @@ def add_to_cart_view(request):
         else:
             return JsonResponse({'error': 'You need to login first!'})
     return redirect('/')
+
+
+
+# View Cart
+
+def view_cart(request):
+    cart = Cart.objects.filter(user=request.user)
+    context = {'cart':cart}
+    return render(request, 'store/cart.html', context)
+
+
+# Update cart
