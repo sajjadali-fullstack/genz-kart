@@ -1,0 +1,151 @@
+{% extends 'store/layouts/base.html' %}
+
+
+
+<!-- Title Block -->
+{% block titleBlock %}
+<title>View</title>
+{% endblock titleBlock %}
+
+<!-- Style Block -->
+{% block styleBlock %}
+<style>
+    /* Desktop par hover effect dene ke liye */
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Mobile par button aur text size handle karne ke liye */
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 0.8rem !important;
+        }
+
+        .btn-sm {
+            padding: 5px 2px;
+            font-size: 0.7rem !important;
+        }
+    }
+
+    /* Mobile ke upar wala tag */
+    .product-viewtag {
+        position: absolute;
+        /* Image ke upar lane ke liye */
+        top: 10px;
+        /* Thoda upar se gap */
+        left: 10px;
+        /* Thoda left se gap */
+        z-index: 10;
+        /* Taaki image ke niche na dabe */
+        padding: 5px 10px;
+        /* Badge ka size thoda bada dikhe */
+        font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+        .product-viewtag {
+            font-size: 12px;
+            padding: 3px 7px;
+            top: 5px;
+            left: 5px;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+<!-- Content Block -->
+{% block contentBlock %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a href="{%  url 'home' %}" class="text-white text-decoration-none fw-bold">Home / </a>
+        <a href="{%  url 'view_cart' %}" class="text-white text-decoration-none fw-bold">Cart </a>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow">
+
+                    <!-- if user has any product in his cart -->
+                    {% if cart %}
+                    {% for item in cart %}
+                    <div class="row product_data">
+
+                        <div class="col-md-2 my-auto">
+                            <img src="{{ item.product.product_image.url }}" alt="Image" width="100px">
+                        </div>
+
+                        <div class="col-md-3 my-auto">
+                            <h4>{{ item.product.name }}</h4>
+                        </div>
+
+                        <div class="col-md-3 my-auto">
+                            <h4>Rs {{ item.product.selling_price|stringformat:".2f" }}</h4>
+                        </div>
+
+                        <div class="col-md-3 my-auto">
+                            <input type="hidden" class="prod_id" value="{{ item.product.id }}">
+                            {% csrf_token %}
+
+                            {% if item.product.quantity >= item.product_qty %}
+                            <label>Quantity:</label>
+                            <div class="input-group text-center mb-3" style="width: 130px;">
+                                <button class="input-group-text decrement-btn">-</button>
+                                <input type="text" class="form-control text-center qty-input"
+                                    value="{{ item.product_qty }}">
+                                <button class="input-group-text increment-btn">+</button>
+                            </div>
+                            {% else %}
+                            <h5>Out of Stock</h5>
+                            {% endif %}
+                        </div>
+
+                        
+
+                        <div class="col-md-2 my-auto">
+                            <h4>Available: {{ item.product.quantity }}</h4>
+                            <h4>Qty: {{ item.product_qty }}</h4>
+                        </div>
+
+
+                    
+
+                        <div class="col-md-1 my-auto">
+                            <a href="{% url 'product_details' item.product.category.slug item.product.slug %}"
+                                class="btn btn-primary">View</a>
+                        </div>
+
+                        <div class="col-md-2 my-auto">
+                            <button class="btn btn-danger delete-cart-item">
+                                <i class="fa fa-trash"></i> Remove
+                            </button>
+                        </div>
+
+                    </div>
+                    
+                    <hr>
+                    {% endfor %}
+
+                    {% else %}
+                    <h4>Your Cart is Empty</h4>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock contentBlock %}
