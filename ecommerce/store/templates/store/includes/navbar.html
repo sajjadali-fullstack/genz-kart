@@ -43,6 +43,12 @@
                             href="{% url 'collections' %}">Collections</a>
                     </li>
 
+                    <!-- Cart -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'cart' %}active{% endif %}"
+                            aria-current="page" href="{% url 'view_cart' %}">Cart</a>
+                    </li>
+
                     <!-- Pricing -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.resolver_match.url_name == 'collections' %}active{% endif %}"
@@ -86,9 +92,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
