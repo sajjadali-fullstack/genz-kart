@@ -22,7 +22,7 @@ GenZKart is a professional e-commerce web application built using Django. It use
 ---
 
 ### 🛍️ Collection Page
-![Collection Page](#)
+![Collection Page](asserts/genzKart-collection.png)
 
 ---
 
