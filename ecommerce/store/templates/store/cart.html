@@ -73,7 +73,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card shadow">
+                <div class="card shadow cartdata">
 
                     <!-- if user has any product in his cart -->
                     {% if cart %}
@@ -84,14 +84,17 @@
                             <img src="{{ item.product.product_image.url }}" alt="Image" width="100px">
                         </div>
 
+                        <!-- Product Name -->
                         <div class="col-md-3 my-auto">
-                            <h4>{{ item.product.name }}</h4>
+                            <h6>{{ item.product.name }}</h6>
                         </div>
 
+                        <!-- Product Price -->
                         <div class="col-md-3 my-auto">
-                            <h4>Rs {{ item.product.selling_price|stringformat:".2f" }}</h4>
+                            <h5>Rs {{ item.product.selling_price|stringformat:".2f" }}</h5>
                         </div>
 
+                        <!-- Product Quantity -->
                         <div class="col-md-3 my-auto">
                             <input type="hidden" class="prod_id" value="{{ item.product.id }}">
                             {% csrf_token %}
@@ -99,25 +102,23 @@
                             {% if item.product.quantity >= item.product_qty %}
                             <label>Quantity:</label>
                             <div class="input-group text-center mb-3" style="width: 130px;">
-                                <button class="input-group-text decrement-btn">-</button>
+                                <button class="input-group-text changeQuantity decrement-btn">-</button>
                                 <input type="text" class="form-control text-center qty-input"
                                     value="{{ item.product_qty }}">
-                                <button class="input-group-text increment-btn">+</button>
+                                <button class="input-group-text changeQuantity increment-btn">+</button>
                             </div>
                             {% else %}
                             <h5>Out of Stock</h5>
                             {% endif %}
                         </div>
 
-                        
+
 
                         <div class="col-md-2 my-auto">
                             <h4>Available: {{ item.product.quantity }}</h4>
                             <h4>Qty: {{ item.product_qty }}</h4>
                         </div>
 
-
-                    
 
                         <div class="col-md-1 my-auto">
                             <a href="{% url 'product_details' item.product.category.slug item.product.slug %}"
@@ -126,12 +127,11 @@
 
                         <div class="col-md-2 my-auto">
                             <button class="btn btn-danger delete-cart-item">
-                                <i class="fa fa-trash"></i> Remove
-                            </button>
+                                <i class="fa fa-trash"></i>Remove</button>
                         </div>
 
                     </div>
-                    
+
                     <hr>
                     {% endfor %}
 
