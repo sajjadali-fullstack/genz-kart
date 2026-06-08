@@ -45,3 +45,33 @@ def view_cart(request):
 
 
 # Update cart
+def update_cart_view(request):
+    if request.method == 'POST':
+        # Fetch:- product id,
+        prod_id = int(request.POST.get('product_id'))
+        if(Cart.objects.filter(user=request.user, product_id=prod_id)):
+            # if product exist in the user cart
+            prod_qty = int(request.POST.get('product_qty'))
+            cart = Cart.objects.get(product_id=prod_id, user=request.user)
+            cart.product_qty = prod_qty
+            cart.save()
+            return JsonResponse({'status': "Product Updated Sucessfully!"})
+        else:
+            return JsonResponse({'error': "Product Not Found!"})
+        
+    return redirect('/')
+
+
+# Delete Cart Item
+def delete_cart_item(request):
+    if request.method == 'POST':
+        prod_id = int(request.POST.get('product_id'))
+        if(Cart.objects.filter(user=request.user, product_id=prod_id)):
+            cart_item = Cart.objects.get(product_id=prod_id, user=request.user)
+            cart_item.delete()
+
+        return JsonResponse({'status': "Product Deleted Sucessfully!"})
+        # else:
+        #     return JsonResponse({'error': "Product Not Found!"})
+    # if sombody accessing without POST method it will redirect to the homer page
+    return redirect('/')
