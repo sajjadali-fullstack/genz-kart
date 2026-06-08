@@ -21,6 +21,8 @@ urlpatterns = [
     # Cart
     path('add-to-cart/', cart.add_to_cart_view, name='add_to_cart'),
     path('cart/', cart.view_cart, name='view_cart'),
+    path('update-cart/', cart.update_cart_view, name='update_cart'),
+    path('delete-cart-item/', cart.delete_cart_item, name='delete_cart_item'),
     
 
 ]
