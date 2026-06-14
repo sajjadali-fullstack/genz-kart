@@ -60,9 +60,37 @@ $(document).ready(function () {
         });
 
 
-
-
     });
+
+
+
+    $('.addToWishlist').click(function (e) {
+        e.preventDefault();
+
+        let product_id = $(this).closest('.product_data').find('.prod_id').val();
+        let token = $('input[name=csrfmiddlewaretoken]').val();
+
+        
+        $.ajax({
+            method: "POST",
+            url: "/add-to-wishlist/",
+            data: {
+                'product_id': product_id,
+                // 'product_qty': product_qty,
+                csrfmiddlewaretoken: token
+
+            },
+            success: function (response) {
+                alertify.success(response.status);
+
+            }
+
+            
+        });
+    });
+
+
+
     $('.changeQuantity').click(function (e) {
         e.preventDefault();
 
