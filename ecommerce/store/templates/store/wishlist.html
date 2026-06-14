@@ -1,0 +1,70 @@
+{% extends 'store/layouts/base.html' %}
+
+
+
+<!-- Title Block -->
+{% block titleBlock %}
+<title>Whishlist | Page</title>
+{% endblock titleBlock %}
+
+<!-- Style Block -->
+{% block styleBlock %}
+<style>
+    /* Desktop par hover effect dene ke liye */
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Mobile par button aur text size handle karne ke liye */
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 0.8rem !important;
+        }
+
+        .btn-sm {
+            padding: 5px 2px;
+            font-size: 0.7rem !important;
+        }
+    }
+
+    /* Mobile ke upar wala tag */
+    .product-viewtag {
+        position: absolute;
+        /* Image ke upar lane ke liye */
+        top: 10px;
+        /* Thoda upar se gap */
+        left: 10px;
+        /* Thoda left se gap */
+        z-index: 10;
+        /* Taaki image ke niche na dabe */
+        padding: 5px 10px;
+        /* Badge ka size thoda bada dikhe */
+        font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+        .product-viewtag {
+            font-size: 12px;
+            padding: 3px 7px;
+            top: 5px;
+            left: 5px;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+<!-- Content Block -->
+{% block contentBlock %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a href="{%  url 'home' %}" class="text-white text-decoration-none fw-bold">Home / </a>
+        <a href="{%  url 'wishlist' %}" class="text-white text-decoration-none fw-bold">Whishlist </a>
+
+    </div>
+    
+</div>
+{{ wishlist }} 
+
+{% endblock contentBlock %}
