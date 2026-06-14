@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from store.forms import CustomUserForm
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout  # for login
+from django.contrib.auth.decorators import login_required
 from store.models import Product,Cart
 from django.http import JsonResponse
+
 
 
 # Add To Cart
@@ -37,7 +37,7 @@ def add_to_cart_view(request):
 
 
 # View Cart
-
+@login_required(login_url='login')
 def view_cart(request):
     cart = Cart.objects.filter(user=request.user)
     context = {'cart':cart}
