@@ -45,8 +45,12 @@
 
                     <!-- Cart -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'cart' %}active{% endif %}" aria-current="page" href="{% url 'view_cart' %}">Cart</a>
-                           
+                        <a class="nav-link {% if request.resolver_match.url_name == 'cart' %}active{% endif %}" aria-current="page" href="{% url 'view_cart' %}">Cart</a>                         
+                    </li>
+
+                    <!-- Wishlist -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'wishlist' %}active{% endif %}" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>                         
                     </li>
 
                     <!-- Pricing -->
