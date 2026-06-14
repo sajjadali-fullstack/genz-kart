@@ -120,24 +120,24 @@
                                     <div class="input-group text-center mb-3" style="width: 130px;">
                                         <button class="input-group-text decrement-btn">-</button>
                                         <input type="text" name="quantity" class="form-control text-center qty-input"
-                                            value="1">
+                                              value="1">
                                         <button class="input-group-text increment-btn">+</button>
                                     </div>
                                 </div>
-                                
+
                                 <!-- ADD TO CART -->
                                 <div class="col-md-9 pt-4">
                                     {% if products.quantity > 0 %}
                                     <div class="d-grid gap-2 d-md-block">
                                         <button type="button" class="btn btn-primary me-md-2 addToCartBtn">Add to Cart
                                             <i class="fa fa-shopping-cart"></i></button>
-                                        <button type="button" class="btn btn-success">
+                                        <button type="button" class="btn btn-success addToWishlist">
                                             Add to Wishlist <i class="fa fa-heart"></i>
                                         </button>
                                     </div>
                                     {% else %}
                                     <div class="d-grid d-md-block">
-                                        <button type="button" class="btn btn-success">
+                                        <button type="button" class="btn btn-success addToWishlist">
                                             Add to Wishlist <i class="fa fa-heart"></i>
                                         </button>
                                     </div>
