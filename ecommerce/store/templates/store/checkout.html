@@ -1,0 +1,295 @@
+{% extends 'store/layouts/base.html' %}
+
+{% block titleBlock %}
+<title>Checkout | GenZKart</title>
+{% endblock titleBlock %}
+
+{% block styleBlock %}
+<style>
+    body {
+        background: #f8f9fa;
+    }
+
+    .checkout-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .checkout-card .card-body {
+        padding: 25px;
+    }
+
+    .checkout-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 10px 14px;
+        border: 1px solid #ced4da;
+    }
+
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: none;
+    }
+
+    textarea.form-control {
+        resize: none;
+    }
+
+    .table img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .table td,
+    .table th {
+        vertical-align: middle;
+    }
+
+    .grand-total {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .btn-order {
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    @media(max-width:768px) {
+
+        .checkout-card {
+            margin-bottom: 20px;
+        }
+
+        .checkout-title {
+            font-size: 18px;
+        }
+
+        .table td,
+        .table th {
+            font-size: 14px;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+{% block contentBlock %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a href="{% url 'home' %}" class="text-white text-decoration-none fw-bold">
+            Home /
+        </a>
+
+        <span class="text-white fw-bold">
+            Checkout
+        </span>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    <div class="row g-4">
+
+        <!-- Billing Details -->
+        <div class="col-lg-7">
+
+            <div class="card shadow checkout-card">
+
+                <div class="card-body">
+
+                    <h5 class="checkout-title">
+                        Billing Details
+                    </h5>
+
+                    <hr>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter First Name">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Last Name">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter Email">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" placeholder="Enter Phone Number">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control"
+                                      rows="3"
+                                      placeholder="Enter Full Address"></textarea>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" placeholder="Enter City">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">State</label>
+                            <input type="text" class="form-control" placeholder="Enter State">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control" placeholder="Enter Country">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Pin Code</label>
+                            <input type="number" class="form-control" placeholder="Enter Pin Code">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-5">
+
+            <div class="card shadow checkout-card">
+
+                <div class="card-body">
+
+                    <h5 class="checkout-title">
+                        Order Summary
+                    </h5>
+
+                    <hr>
+
+                    {% if cartitems %}
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle">
+
+                            <thead class="table-light">
+
+                                <tr>
+                                    <th>Product</th>
+                                    <th class="text-center">Qty</th>
+                                    <th class="text-end">Price</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                {% for item in cartitems %}
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="d-flex align-items-center">
+
+                                            <img src="{{ item.product.product_image.url }}"
+                                                 width="60"
+                                                 height="60"
+                                                 class="me-3 border rounded">
+
+                                            <div>
+
+                                                <h6 class="mb-1">
+                                                    {{ item.product.name }}
+                                                </h6>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td class="text-center">
+                                        {{ item.product_qty }}
+                                    </td>
+
+                                    <td class="text-end">
+                                        ₹ {{ item.product.selling_price|stringformat:"d" }}
+                                    </td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                                <tr class="table-light">
+
+                                    <td colspan="2" class="fw-bold">
+                                        Grand Total
+                                    </td>
+
+                                    <td class="fw-bold text-end">
+                                        ₹ {{ total_price|stringformat:"d" }}
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <button class="btn btn-success btn-order w-100 mt-3">
+                        <i class="fa fa-money me-2"></i>
+                        Cash On Delivery | Place Order
+                    </button>
+
+                    {% else %}
+
+                    <div class="text-center py-4">
+
+                        <i class="fa fa-shopping-cart fa-3x text-secondary mb-3"></i>
+
+                        <h5>Your Cart is Empty</h5>
+
+                        <a href="{% url 'collections' %}" class="btn btn-primary mt-3">
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock contentBlock %}
