@@ -4,53 +4,74 @@
 
 <!-- Title Block -->
 {% block titleBlock %}
-<title>Whishlist | Page</title>
+<title>Wishlist | GenZKart</title>
 {% endblock titleBlock %}
 
 <!-- Style Block -->
 {% block styleBlock %}
 <style>
-    /* Desktop par hover effect dene ke liye */
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    body {
+        background: #f8f9fa;
     }
 
-    /* Mobile par button aur text size handle karne ke liye */
-    @media (max-width: 576px) {
-        .card-title {
-            font-size: 0.8rem !important;
+    .wishdata {
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .product_data {
+        transition: all .3s ease;
+    }
+
+    .product_data:hover {
+        background: #f8f9fa;
+    }
+
+    .product_data img {
+        max-height: 120px;
+        transition: .3s;
+        border-radius: 12px;
+    }
+
+    .product_data:hover img {
+        transform: scale(1.05);
+    }
+
+    .btn {
+        border-radius: 10px;
+    }
+
+    @media (max-width:768px) {
+
+        .product_data {
+            text-align: center;
         }
 
-        .btn-sm {
-            padding: 5px 2px;
-            font-size: 0.7rem !important;
+        .product_data h5 {
+            font-size: 18px;
+        }
+
+        .product_data h6 {
+            font-size: 17px;
+        }
+
+        .product_data img {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            width: 100%;
         }
     }
 
-    /* Mobile ke upar wala tag */
-    .product-viewtag {
-        position: absolute;
-        /* Image ke upar lane ke liye */
-        top: 10px;
-        /* Thoda upar se gap */
-        left: 10px;
-        /* Thoda left se gap */
-        z-index: 10;
-        /* Taaki image ke niche na dabe */
-        padding: 5px 10px;
-        /* Badge ka size thoda bada dikhe */
-        font-size: 14px;
-    }
+    .product_data h5{
+    word-break: break-word;
+}
 
-    @media (max-width: 576px) {
-        .product-viewtag {
-            font-size: 12px;
-            padding: 3px 7px;
-            top: 5px;
-            left: 5px;
-        }
-    }
+.wishdata{
+    padding:10px;
+}
 </style>
 {% endblock styleBlock %}
 
@@ -63,8 +84,88 @@
         <a href="{%  url 'wishlist' %}" class="text-white text-decoration-none fw-bold">Whishlist </a>
 
     </div>
-    
-</div>
-{{ wishlist }} 
 
-{% endblock contentBlock %}
+</div>
+<!-- {{ wishlist }} -->
+
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow wishdata">
+
+                    <!-- if user has any product in his cart -->
+                    {% if wishlist %}
+                    {% for item in wishlist %}
+                    <div class="row product_data align-items-center py-3 px-2">
+
+                        <!-- Product Image -->
+                        <div class="col-12 col-sm-3 col-md-2 text-center mb-3 mb-sm-0">
+                            <img src="{{ item.product.product_image.url }}" alt="{{ item.product.name }}"
+                                class="img-fluid rounded" style="max-height:120px;">
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="col-12 col-sm-9 col-md-5 text-center text-md-start mb-3 mb-md-0">
+                            <h5 class="fw-bold mb-2 text-break">{{ item.product.name }}</h5>
+                            <h5 class="text-success fw-bold mb-0">
+                                ₹ {{ item.product.selling_price|stringformat:".2f" }}
+                            </h5>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="col-12 col-md-5">
+                            <input type="hidden" class="prod_id" value="{{ item.product_id }}">
+                            {% csrf_token %}
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-md-end gap-2">
+
+                                <a href="{% url 'product_details' item.product.category.slug item.product.slug %}"
+                                    class="btn btn-primary flex-fill">
+                                    <i class="fa fa-eye me-1"></i> View Product
+                                </a>
+
+                                <button class="btn btn-danger delete-whishlist-item flex-fill">
+                                    <i class="fa fa-trash me-1"></i> Remove
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-0">
+                    {% endfor %}
+
+                    {% else %}
+                    <div class="text-center py-5">
+
+                        <i class="fa fa-heart-o text-danger mb-3" style="font-size:70px;"></i>
+
+                        <h3 class="fw-bold">
+                            Your Wishlist is Empty
+                        </h3>
+
+                        <p class="text-muted">
+                            Looks like you haven't added anything to your wishlist yet.
+                        </p>
+
+                        <a href="{% url 'collections' %}" class="btn btn-primary px-4">
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% endblock contentBlock %}
