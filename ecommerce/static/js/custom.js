@@ -70,7 +70,7 @@ $(document).ready(function () {
         let product_id = $(this).closest('.product_data').find('.prod_id').val();
         let token = $('input[name=csrfmiddlewaretoken]').val();
 
-        
+
         $.ajax({
             method: "POST",
             url: "/add-to-wishlist/",
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
             }
 
-            
+
         });
     });
 
@@ -124,30 +124,64 @@ $(document).ready(function () {
     });
 
     // Delete Cart Item
-    // $('.delete-cart-item').click(function (e) {
-    //     e.preventDefault();
-    //     // Fetch:- product id,
-    //     let product_id = $(this).closest('.product_data').find('.prod_id').val();
-    //     let token = $('input[name=csrfmiddlewaretoken]').val();
+    $(document).on('click', '.delete-cart-item', function (e) {
+        e.preventDefault();
+        // Fetch:- product id,
+        let product_id = $(this).closest('.product_data').find('.prod_id').val();
+        let token = $('input[name=csrfmiddlewaretoken]').val();
 
-    //     $.ajax({
-    //         method: "POST",
-    //         url: "delete-cart-item",
-    //         data: {
-    //             'product_id': product_id,
-    //             csrfmiddlewaretoken: token
-    //         },
-    //         success: function (response) {
-    //             alertify.sucess(response.status);
-    //             $('.cartdata').load(location.href + ' .cartdata');
+        $.ajax({
+            method: "POST",
+            url: "delete-cart-item",
+            data: {
+                'product_id': product_id,
+                csrfmiddlewaretoken: token
+            },
+            success: function (response) {
+                alertify.sucess(response.status);
+                $('.cartdata').load(location.href + ' .cartdata');
 
-    //         }
+            }
 
-    //     });
+        });
 
 
 
-    // });
+    });
+
+
+
+    // Delete Wishlist Item
+    $(document).on('click', '.delete-whishlist-item', function (e) {
+        e.preventDefault();
+        // Fetch:- product id,
+        let product_id = $(this).closest('.product_data').find('.prod_id').val();
+        let token = $('input[name=csrfmiddlewaretoken]').val();
+
+        $.ajax({
+            method: "POST",
+            url: "/delete-wishlist-item/", // URL ke aage aur peeche slash (/) zaroor lagayein
+            data: {
+                'product_id': product_id,
+                csrfmiddlewaretoken: token
+            },
+            success: function (response) {
+                // Sahi spelling 'success' ke sath Alertify notification
+                alertify.success(response.status);
+
+                // Sirf cart data wale part ko refresh karne ke liye
+                $('.wishdata').load(location.href + ' .wishdata');
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Error details:", error);
+                alertify.error("Something went wrong! Please try again.");
+            }
+        });
+    });
+
+
+
 
     $(document).ready(function () {
         // Event Delegation use kiya hai taaki dynamic reload (.load) ke baad bhi button kaam kare
