@@ -33,3 +33,28 @@ def add_to_wishlist(request):
         else:
             return JsonResponse({'status': 'You need to login first!'})
     return redirect('/')  # if someone try to access without POST method it will redirect to the homer page
+
+
+
+
+# Delete Wishlist Item
+def delete_wishlist_item(request):
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            prod_id = int(request.POST.get('product_id'))
+
+            wishlist_item = Wishlist.objects.filter(
+                user=request.user,
+                product_id=prod_id
+            ).first()
+
+            if wishlist_item:
+                wishlist_item.delete()
+                return JsonResponse({'status': 'Product removed from wishlist!'})
+            else:
+                return JsonResponse({'status': 'Product not found in wishlist!'})
+
+        else:
+            return JsonResponse({'status': 'You need to login first!'})
+
+    return redirect('/')
