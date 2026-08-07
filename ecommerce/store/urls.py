@@ -28,6 +28,8 @@ urlpatterns = [
     path('add-to-wishlist/', wishlist.add_to_wishlist, name='add_to_wishlist'),
     path('delete-wishlist-item/', wishlist.delete_wishlist_item, name='delete_wishlist_item'),
 
-    path('checkout/', checkout.index, name='checkout')
+    path('checkout/', checkout.index, name='checkout'),
+    path('placeorder/', checkout.place_order, name='placeorder'),
+
 
 ]
