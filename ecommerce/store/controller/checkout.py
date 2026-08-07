@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from store.models import Wishlist, Cart, Order, OrderItem
+from store.models import Wishlist, Cart, Order, OrderItem, Profile
 from store.models import Product
+from django.http import JsonResponse, HttpResponse
 
 import random
+
+from django.contrib.auth.models import User
 
 # Checkout Page
 @login_required(login_url='login')
@@ -21,7 +24,9 @@ def index(request):
     for item in cartitems:
         total_price += item.product.selling_price * item.product_qty
 
-    context = {'cartitems':cartitems, 'total_price':total_price}
+    userprofile = Profile.objects.filter(user=request.user).first()
+
+    context = {'cartitems':cartitems, 'total_price':total_price, 'userprofile':userprofile}
 
     return render(request, 'store/checkout.html', context)  # render the checkout page
 
@@ -31,6 +36,30 @@ def index(request):
 @login_required(login_url='login')
 def place_order(request):
     if request.method == 'POST':
+
+        currentuser = User.objects.filter(id=request.user.id).first()
+
+# Store in User model
+        if not currentuser.first_name:
+            currentuser.first_name = request.POST.get('fname')
+            currentuser.last_name = request.POST.get('lname')
+            currentuser.save()
+# If user placing it order for the first time
+        if not Profile.objects.filter(user=request.user).exists():
+            userprofile = Profile()
+            
+            userprofile.user = request.user
+            userprofile.phone = request.POST.get('phone')
+            userprofile.address = request.POST.get('address')
+            userprofile.city = request.POST.get('city')
+            userprofile.state = request.POST.get('state')
+            userprofile.country = request.POST.get('country')
+            userprofile.pincode = request.POST.get('pincode')
+            userprofile.save()
+
+
+
+
         # Get the data from the form
         neworder = Order()
         neworder.user = request.user
@@ -45,6 +74,7 @@ def place_order(request):
         neworder.pincode = request.POST.get('pincode')
 
         neworder.payment_mode = request.POST.get('payment_mode')
+        neworder.payment_id = request.POST.get('payment_id')
 
 
         cart = Cart.objects.filter(user=request.user)
@@ -73,4 +103,31 @@ def place_order(request):
 
         messages.success(request, 'Order Placed Successfully')
 
+        pay_mode = request.POST.get('payment_mode')
+        if (pay_mode == 'Paid by Razorpay'):
+            return JsonResponse({'status':'Your Order Placed has been Successfull'})
+
+
     return redirect('home')
+
+
+
+# Razorpay Checkout
+@login_required(login_url='login')
+def razorpaycheck(request):
+    # To get the order details
+    cart = Cart.objects.filter(user=request.user)
+    total_price = 0
+
+    for item in cart:
+        total_price += item.product.selling_price * item.product_qty
+        
+    return JsonResponse({'total_price': total_price})
+
+
+
+
+# My Orders
+@login_required(login_url='login')
+def my_orders(request):
+    return HttpResponse('My Orders Page')
