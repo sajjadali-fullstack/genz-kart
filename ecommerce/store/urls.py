@@ -30,6 +30,8 @@ urlpatterns = [
 
     path('checkout/', checkout.index, name='checkout'),
     path('placeorder/', checkout.place_order, name='placeorder'),
+    path('proceed-to-pay/', checkout.razorpaycheck, name='proceed_to_pay'),
+    path('my-orders/', checkout.my_orders, name='my_orders'),
 
 
 ]
