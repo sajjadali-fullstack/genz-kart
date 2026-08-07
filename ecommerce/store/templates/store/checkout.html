@@ -103,68 +103,72 @@
 
 <div class="container py-5">
 
-    <div class="row g-4">
+    <form action="{% url 'placeorder' %}" method="POST">
+        {% csrf_token %}
 
-        <!-- Billing Details -->
-        <div class="col-lg-7">
+        <div class="row g-4">
 
-            <div class="card shadow checkout-card">
+            <!-- Billing Details -->
+            <div class="col-lg-7">
 
-                <div class="card-body">
+                <div class="card shadow checkout-card">
 
-                    <h5 class="checkout-title">
-                        Billing Details
-                    </h5>
+                    <div class="card-body">
 
-                    <hr>
+                        <h5 class="checkout-title">
+                            Billing Details
+                        </h5>
 
-                    <div class="row">
+                        <hr>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" placeholder="Enter First Name">
-                        </div>
+                        <div class="row">
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Last Name">
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" required class="form-control" name="fname" placeholder="Enter First Name">
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Enter Email">
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" required class="form-control" name="lname" placeholder="Enter Last Name">
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Phone</label>
-                            <input type="tel" class="form-control" placeholder="Enter Phone Number">
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" required class="form-control" name="email" placeholder="Enter Email">
+                            </div>
 
-                        <div class="col-12 mb-3">
-                            <label class="form-label">Address</label>
-                            <textarea class="form-control"
-                                      rows="3"
-                                      placeholder="Enter Full Address"></textarea>
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" required class="form-control" name="phone" placeholder="Enter Phone Number">
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">City</label>
-                            <input type="text" class="form-control" placeholder="Enter City">
-                        </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Address</label>
+                                <textarea class="form-control" name="address" rows="3"
+                                  required  placeholder="Enter Full Address"></textarea>
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">State</label>
-                            <input type="text" class="form-control" placeholder="Enter State">
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">City</label>
+                                <input type="text" required class="form-control" name="city" placeholder="Enter City">
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Country</label>
-                            <input type="text" class="form-control" placeholder="Enter Country">
-                        </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">State</label>
+                                <input type="text" required class="form-control" name="state" placeholder="Enter State">
+                            </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Pin Code</label>
-                            <input type="number" class="form-control" placeholder="Enter Pin Code">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Country</label>
+                                <input type="text" required class="form-control" name="country" placeholder="Enter Country">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Pin Code</label>
+                                <input type="number" required class="form-control" name="pincode" placeholder="Enter PinCode">
+                            </div>
+
                         </div>
 
                     </div>
@@ -173,123 +177,119 @@
 
             </div>
 
-        </div>
+            <!-- Order Summary -->
+            <div class="col-lg-5">
 
-        <!-- Order Summary -->
-        <div class="col-lg-5">
+                <div class="card shadow checkout-card">
 
-            <div class="card shadow checkout-card">
+                    <div class="card-body">
 
-                <div class="card-body">
+                        <h5 class="checkout-title">
+                            Order Summary
+                        </h5>
 
-                    <h5 class="checkout-title">
-                        Order Summary
-                    </h5>
+                        <hr>
 
-                    <hr>
+                        {% if cartitems %}
 
-                    {% if cartitems %}
+                        <div class="table-responsive">
 
-                    <div class="table-responsive">
+                            <table class="table table-hover align-middle">
 
-                        <table class="table table-hover align-middle">
+                                <thead class="table-light">
 
-                            <thead class="table-light">
+                                    <tr>
+                                        <th>Product</th>
+                                        <th class="text-center">Qty</th>
+                                        <th class="text-end">Price</th>
+                                    </tr>
 
-                                <tr>
-                                    <th>Product</th>
-                                    <th class="text-center">Qty</th>
-                                    <th class="text-end">Price</th>
-                                </tr>
+                                </thead>
 
-                            </thead>
+                                <tbody>
 
-                            <tbody>
+                                    {% for item in cartitems %}
 
-                                {% for item in cartitems %}
+                                    <tr>
 
-                                <tr>
+                                        <td>
 
-                                    <td>
+                                            <div class="d-flex align-items-center">
 
-                                        <div class="d-flex align-items-center">
+                                                <img src="{{ item.product.product_image.url }}" width="60" height="60"
+                                                    class="me-3 border rounded">
 
-                                            <img src="{{ item.product.product_image.url }}"
-                                                 width="60"
-                                                 height="60"
-                                                 class="me-3 border rounded">
+                                                <div>
 
-                                            <div>
+                                                    <h6 class="mb-1">
+                                                        {{ item.product.name }}
+                                                    </h6>
 
-                                                <h6 class="mb-1">
-                                                    {{ item.product.name }}
-                                                </h6>
+                                                </div>
 
                                             </div>
 
-                                        </div>
+                                        </td>
 
-                                    </td>
+                                        <td class="text-center">
+                                            {{ item.product_qty }}
+                                        </td>
 
-                                    <td class="text-center">
-                                        {{ item.product_qty }}
-                                    </td>
+                                        <td class="text-end">
+                                            ₹ {{ item.product.selling_price|stringformat:"d" }}
+                                        </td>
 
-                                    <td class="text-end">
-                                        ₹ {{ item.product.selling_price|stringformat:"d" }}
-                                    </td>
+                                    </tr>
 
-                                </tr>
+                                    {% endfor %}
 
-                                {% endfor %}
+                                    <tr class="table-light">
 
-                                <tr class="table-light">
+                                        <td colspan="2" class="fw-bold">
+                                            Grand Total
+                                        </td>
 
-                                    <td colspan="2" class="fw-bold">
-                                        Grand Total
-                                    </td>
+                                        <td class="fw-bold text-end">
+                                            ₹ {{ total_price|stringformat:"d" }}
+                                        </td>
 
-                                    <td class="fw-bold text-end">
-                                        ₹ {{ total_price|stringformat:"d" }}
-                                    </td>
+                                    </tr>
 
-                                </tr>
+                                </tbody>
 
-                            </tbody>
+                            </table>
+                                
+                            </div>
+                            <input type="hidden" value="COD" name="payment_mode">
+                            <button type="submit" class="btn btn-success btn-order w-100 mt-3">
+                                <i class="fa fa-money me-2"></i>
+                                Cash On Delivery | Place Order
+                            </button>
+                            
+                        {% else %}
 
-                        </table>
+                        <div class="text-center py-4">
+
+                            <i class="fa fa-shopping-cart fa-3x text-secondary mb-3"></i>
+
+                            <h5>Your Cart is Empty</h5>
+
+                            <a href="{% url 'collections' %}" class="btn btn-primary mt-3">
+                                Continue Shopping
+                            </a>
+
+                        </div>
+
+                        {% endif %}
 
                     </div>
-
-                    <button class="btn btn-success btn-order w-100 mt-3">
-                        <i class="fa fa-money me-2"></i>
-                        Cash On Delivery | Place Order
-                    </button>
-
-                    {% else %}
-
-                    <div class="text-center py-4">
-
-                        <i class="fa fa-shopping-cart fa-3x text-secondary mb-3"></i>
-
-                        <h5>Your Cart is Empty</h5>
-
-                        <a href="{% url 'collections' %}" class="btn btn-primary mt-3">
-                            Continue Shopping
-                        </a>
-
-                    </div>
-
-                    {% endif %}
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
-
+    </form>
 </div>
 
 {% endblock contentBlock %}
