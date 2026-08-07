@@ -125,48 +125,54 @@
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">First Name</label>
-                                <input type="text" required class="form-control" name="fname" placeholder="Enter First Name">
+                                <input type="text" required value="{{ request.user.first_name }}" class="form-control"
+                                    name="fname" placeholder="Enter First Name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Last Name</label>
-                                <input type="text" required class="form-control" name="lname" placeholder="Enter Last Name">
+                                <input type="text" required value="{{ request.user.last_name }}" class="form-control"
+                                    name="lname" placeholder="Enter Last Name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" required class="form-control" name="email" placeholder="Enter Email">
+                                <input type="email" required value="{{ request.user.email }}" class="form-control"
+                                    name="email" placeholder="Enter Email">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Phone</label>
-                                <input type="tel" required class="form-control" name="phone" placeholder="Enter Phone Number">
+                                <input type="tel" required value="{{ userprofile.phone }}" class="form-control"
+                                    name="phone" placeholder="Enter Phone Number">
                             </div>
 
-                            <div class="col-12 mb-3">
-                                <label class="form-label">Address</label>
-                                <textarea class="form-control" name="address" rows="3"
-                                  required  placeholder="Enter Full Address"></textarea>
-                            </div>
+                            <div class="col-12 mb-3"> <label class="form-label">Address</label><textarea
+                                    class="form-control" name="address" rows="3" required
+                                    placeholder="Enter Full Address">{{ userprofile.address }}</textarea> </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">City</label>
-                                <input type="text" required class="form-control" name="city" placeholder="Enter City">
+                                <input type="text" value="{{ userprofile.city }}" required class="form-control"
+                                    name="city" placeholder="Enter City">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">State</label>
-                                <input type="text" required class="form-control" name="state" placeholder="Enter State">
+                                <input type="text" value="{{ userprofile.state }}" required class="form-control"
+                                    name="state" placeholder="Enter State">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Country</label>
-                                <input type="text" required class="form-control" name="country" placeholder="Enter Country">
+                                <input type="text" value="{{ userprofile.country }}" required class="form-control"
+                                    name="country" placeholder="Enter Country">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Pin Code</label>
-                                <input type="number" required class="form-control" name="pincode" placeholder="Enter PinCode">
+                                <input type="number" value="{{ userprofile.pincode }}" required class="form-control"
+                                    name="pincode" placeholder="Enter PinCode">
                             </div>
 
                         </div>
@@ -216,7 +222,7 @@
 
                                             <div class="d-flex align-items-center">
 
-                                                <img src="{{ item.product.product_image.url }}" width="60" height="60"
+                                                <img src="{{ item.product.product_image.url }}" width="60px"
                                                     class="me-3 border rounded">
 
                                                 <div>
@@ -258,14 +264,19 @@
                                 </tbody>
 
                             </table>
-                                
-                            </div>
-                            <input type="hidden" value="COD" name="payment_mode">
-                            <button type="submit" class="btn btn-success btn-order w-100 mt-3">
-                                <i class="fa fa-money me-2"></i>
-                                Cash On Delivery | Place Order
-                            </button>
-                            
+
+                        </div>
+                        <input type="hidden" value="COD" name="payment_mode">
+                        <!--COD  -->
+                        <button type="submit" class="btn btn-success btn-order w-100 mt-3"> <i
+                                class="fa fa-money me-2"></i> Cash On Delivery | Place Order </button>
+                        <!-- Razorpay -->
+                        <button type="button" class="btn btn-primary btn-order w-100 mt-2 payWithRazorpay"> <i
+                                class="fa fa-credit-card me-2"></i> Razorpay | Place Order </button>
+
+                        <!-- <button type="button" class="btn btn-primary btn-order w-100 mt-2"><i
+                                class="fa fa-lock me-2"></i>Secure Payment with Razorpay</button> -->
+
                         {% else %}
 
                         <div class="text-center py-4">
@@ -293,3 +304,12 @@
 </div>
 
 {% endblock contentBlock %}
+
+
+<!-- Razorpay  Script -->
+ <!-- https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/integration-steps/ -->
+{% block scriptsBlock %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<!-- Sweetalert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% endblock scriptsBlock %}
