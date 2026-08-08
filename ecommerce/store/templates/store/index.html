@@ -3,9 +3,97 @@
 <!-- Content -->
 {% block contentBlock %}
 <!-- Include the slider -->
-{%  include 'store/includes/slider.html' %}
+{% include 'store/includes/slider.html' %}
 
-<h1> Home Page</h1>
+
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-4">Trending Products</h3>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2 g-md-3">
+
+        {% for item in trending_products %}
+
+        <div class="col product_data item">
+
+            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; transition: transform 0.2s;">
+
+                <a href="{% url 'product_details' item.category.slug item.slug %}" class="text-decoration-none">
+
+                    <div style="
+                        height: 200px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    ">
+                        {% if item.product_image %}
+                        <img src="{{ item.product_image.url }}" alt="{{ item.name }}" style="
+                                width: 170px;
+                                height: 170px;
+                                object-fit: contain;
+                                max-width: 100%;
+                            ">
+                        {% else %}
+                        <img src="https://via.placeholder.com/300" alt="{{ item.name }}" style="
+                                width: 170px;
+                                height: 170px;
+                                object-fit: contain;
+                                max-width: 100%;
+                            ">
+                        {% endif %}
+                    </div>
+
+                    <div class="card-body p-2 p-md-3 text-center">
+                        <h6 class="card-title text-dark fw-bold text-truncate" title="{{ item.name }}"
+                            style="font-size: 0.9rem;">
+                            {{ item.name }}
+                        </h6>
+
+                        <span class="text-dark">
+                            ₹ {{ item.selling_price|stringformat:"d" }}
+                        </span>
+                    </div>
+
+                </a>
+
+                <div class="card-footer bg-white border-0 pb-3">
+                    {% if item.quantity > 0 %}
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary btn-sm addToCartBtn" data-id="{{ item.id }}">
+                            Add to Cart
+                            <i class="fa fa-shopping-cart"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-success btn-sm addToWishlist" data-id="{{ item.id }}">
+                            Add to Wishlist
+                            <i class="fa fa-heart"></i>
+                        </button>
+                    </div>
+                    {% else %}
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-danger btn-sm" disabled>
+                            Out of Stock
+                            <i class="fa fa-ban"></i>
+                        </button>
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+<!-- <h1> Home Page</h1> -->
 {% endblock contentBlock %}
 
 <!-- 
