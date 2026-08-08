@@ -277,6 +277,9 @@
                         <!-- <button type="button" class="btn btn-primary btn-order w-100 mt-2"><i
                                 class="fa fa-lock me-2"></i>Secure Payment with Razorpay</button> -->
 
+                        <!-- PayPal -->
+                        <div id="paypal-button-container" class="mt-2"></div>
+
                         {% else %}
 
                         <div class="text-center py-4">
@@ -307,9 +310,73 @@
 
 
 <!-- Razorpay  Script -->
- <!-- https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/integration-steps/ -->
+<!-- https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/integration-steps/ -->
 {% block scriptsBlock %}
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <!-- Sweetalert -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- PayPal -->
+<!-- <script
+    src="https://www.paypal.com/sdk/js?client-id=Aa0KDEJ_0ZOcxm6kbaQRi-alFJYa-mgt3XL3L4NKZ6MhuV7a-hwuMvsStDDzBSL9aum8YglJ-IwmRC4S&currency=USD"></script>
+
+
+<script>
+    paypal.Buttons({
+        style: {
+            layout: 'vertical',
+            // color: 'blue',
+            shape: 'rect',
+            label: 'paypal',
+            tagline: false,
+        },
+
+        onclick: function (data, actions) {
+            // my validation here
+
+            let fname = $("[name='fname']").val();
+            let lname = $("[name='lname']").val();
+            let email = $("[name='email']").val();
+            let phone = $("[name='phone']").val();
+            let address = $("[name='address']").val();
+            let city = $("[name='city']").val();
+            let state = $("[name='state']").val();
+            let country = $("[name='country']").val();
+            let pincode = $("[name='pincode']").val();
+            let token = $("[name='csrfmiddlewaretoken']").val();
+
+            if (fname == "" || lname == "" || email == "" || phone == "" || address == "" || city == "" || state == "" || country == "" || pincode == "") {
+
+                swal("Alert!", "All fields are required!", "error");
+                return false;
+            }
+            else {
+                return true;
+            }
+
+            },
+
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            // value : '0.01',
+                            value: '{{ total_price | stringformat:"d" }}',
+                        }
+                    }]
+                });
+            },
+
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    // sucessful capture for dev/demp purposes
+                    console.log('Capture result', orderData, Json.stringify(orderData), null, 2);
+                    let transaction = orderData.purchase_units[0].payments.captures[0];
+                    alert('Transaction' + transaction.status + ' : ' + transaction.id +
+                        '\n\nSee console for full details');
+                });
+
+            },
+        }).render('#paypal-button-container'); -->
+
+</script>
 {% endblock scriptsBlock %}
