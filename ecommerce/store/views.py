@@ -7,7 +7,9 @@ from django.contrib import messages
 
 # 1. Home View
 def home_view(request):
-    return render(request, 'store/index.html')
+    trending_products = Product.objects.filter(trending=1)
+    context = {'trending_products':trending_products}
+    return render(request, 'store/index.html', context)
 
 # collections
 def collections_view(request):
