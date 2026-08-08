@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css" />
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css" />
+    <!-- Jquery UI Search -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+
+    
 </head>
 
 {% block styleBlock %}
@@ -44,6 +48,12 @@
         /* Headings ke liye Inter use karein */
         font-weight: 700;
     }
+
+    .whatsapp-chat {
+        position: fixed;
+        bottom: 05% !important;
+        left: 03% !important;
+    }
 </style>
 {% endblock styleBlock %}
 
@@ -56,6 +66,15 @@
     <h1>Welcome to base.html page</h1>
     {% endblock contentBlock %}
 
+    <!-- Whatsupp -->
+    <!-- <a href="https://api.whatsapp.com/send/?phone=15551234567&text=HI&type=phone_number&app_absent=0"></a> -->
+    <a href="https://wa.me/919892786322?text=I%20Am%20Interested%20In%20Talking%20With%20You%20%3A%29"
+        class="whatsapp-chat" target="_blank" rel="noopener noreferrer">
+
+        <img src="{% static '/images/whatsapp-logo.webp' %}" alt="WhatsApp" width="60px">
+
+    </a>
+
     <!-- Scripts -->
     {% block scriptsBlock %}
     <p>scripts come from base.html</p>
@@ -63,6 +82,16 @@
 
     <!-- Jquery Increment or decrement -->
     <script src="{% static '/js/jquery-3.7.1.min.js' %}"></script>
+    <!-- jQuery -->
+    <script src="{% static '/js/jquery-3.7.1.min.js' %}"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+
+    <!-- Search JS -->
+    <script src="{% static '/js/search.js' %}"></script>
+
+    
     <!-- Custom JS -->
     <script src="{% static '/js/custom.js' %}"></script>
 
