@@ -1,6 +1,6 @@
 from django.urls import path
 from store import views
-from store.controller import auth_views, cart, wishlist, checkout  # For login / logout / Add to cart
+from store.controller import auth_views, cart, wishlist, checkout, order, search # For login / logout / Add to cart
 
 
 urlpatterns = [
@@ -31,7 +31,10 @@ urlpatterns = [
     path('checkout/', checkout.index, name='checkout'),
     path('placeorder/', checkout.place_order, name='placeorder'),
     path('proceed-to-pay/', checkout.razorpaycheck, name='proceed_to_pay'),
-    path('my-orders/', checkout.my_orders, name='my_orders'),
+    path('my-orders/', order.order_index, name='my_orders'),
+    path('view-order/<str:tracking_no>', order.view_order, name='view_order'),
+
+     path("search-products/", search.search_products, name="search_products"),
 
 
 ]
