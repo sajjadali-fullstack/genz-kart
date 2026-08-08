@@ -103,6 +103,7 @@ class Order(models.Model):
         return f"{self.user.username} - {self.order_status}".format(self.id, self.tracking_no)
 
 
+# Order Item
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -111,5 +112,21 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - {self.price} - {self.quantity}".format(self.order.id, self.order.tracking_no)
-    
 
+
+
+    
+# Profile
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=20, null=False)
+    address = models.TextField(null=False)
+    city = models.CharField(max_length=250, null=False)
+    state = models.CharField(max_length=250, null=False)
+    country = models.CharField(max_length=250, null=False)
+    pincode = models.CharField(max_length=250, null=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.user.email}".format(self.id, self.tracking_no)
