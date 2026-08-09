@@ -36,5 +36,7 @@ urlpatterns = [
 
      path("search-products/", search.search_products, name="search_products"),
 
+     path('about/', views.about_view, name='about'),
+
 
 ]

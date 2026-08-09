@@ -43,3 +43,7 @@ def product_details_view(request, cate_slug, prod_slug):
         messages.error(request, "No Such Category Found")
         return redirect('collections')
     return render(request, 'store/products/view.html', context)
+
+
+def about_view(request):
+    return render(request, 'store/about.html')

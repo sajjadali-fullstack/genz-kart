@@ -1,0 +1,390 @@
+{% extends 'store/layouts/base.html' %}
+
+{% block titleBlock %}
+About | GenzKart
+{% endblock titleBlock %}
+
+{% block styleBlock %}
+<style>
+    .about-wrapper {
+        padding: 70px 20px;
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    }
+
+    .about-hero {
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .about-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 50px;
+        background: #111;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(38px, 6vw, 68px);
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 18px;
+    }
+
+    .about-hero h1 span {
+        color: #6c5ce7;
+    }
+
+    .about-hero p {
+        max-width: 720px;
+        margin: auto;
+        color: #666;
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .about-card {
+        max-width: 1000px;
+        margin: 50px auto 0;
+        background: #fff;
+        border-radius: 24px;
+        padding: 45px;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+        border: 1px solid #eee;
+    }
+
+    .developer {
+        text-align: center;
+    }
+
+    .developer-avatar {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #111, #6c5ce7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 38px;
+        font-weight: 800;
+        box-shadow: 0 10px 30px rgba(108, 92, 231, 0.25);
+    }
+
+    .developer h2 {
+        margin-bottom: 8px;
+        font-weight: 800;
+        color: #111;
+    }
+
+    .developer .role {
+        color: #6c5ce7;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    .developer p {
+        max-width: 700px;
+        margin: auto;
+        color: #666;
+        line-height: 1.8;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 65px auto 30px;
+    }
+
+    .section-title h2 {
+        font-weight: 800;
+        color: #111;
+    }
+
+    .section-title p {
+        color: #777;
+    }
+
+    .tech-grid {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+    }
+
+    .tech-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 18px;
+        padding: 25px 15px;
+        text-align: center;
+        transition: .3s ease;
+    }
+
+    .tech-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    }
+
+    .tech-card i {
+        font-size: 28px;
+        color: #6c5ce7;
+        margin-bottom: 12px;
+    }
+
+    .tech-card h5 {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .tech-card p {
+        margin: 6px 0 0;
+        color: #777;
+        font-size: 13px;
+    }
+
+    .project-section {
+        max-width: 1000px;
+        margin: 65px auto 0;
+        background: #111;
+        color: #fff;
+        border-radius: 24px;
+        padding: 45px;
+    }
+
+    .project-section h2 {
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .project-section p {
+        color: #bbb;
+        line-height: 1.8;
+    }
+
+    .feature-list {
+        margin-top: 25px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .feature-list li {
+        margin-bottom: 12px;
+        color: #ddd;
+    }
+
+    .feature-list i {
+        color: #6c5ce7;
+        margin-right: 8px;
+    }
+
+    .developer-footer {
+        text-align: center;
+        margin-top: 60px;
+        padding-bottom: 20px;
+        color: #777;
+    }
+
+    .developer-footer strong {
+        color: #111;
+    }
+
+    @media (max-width: 576px) {
+        .about-wrapper {
+            padding: 45px 15px;
+        }
+
+        .about-card,
+        .project-section {
+            padding: 30px 20px;
+        }
+
+        .about-hero p {
+            font-size: 15px;
+        }
+    }
+</style>
+{% endblock styleBlock %}
+
+
+{% block contentBlock %}
+
+<div class="about-wrapper">
+
+    <!-- Hero -->
+    <div class="about-hero">
+
+        <span class="about-badge">
+            GENZKART • E-COMMERCE PLATFORM
+        </span>
+
+        <h1>
+            Built with <span>Code.</span><br>
+            Designed for <span>People.</span>
+        </h1>
+
+        <p>
+            GenzKart is a modern Django-based e-commerce platform
+            built to provide a simple, responsive and smooth online
+            shopping experience.
+        </p>
+
+    </div>
+
+
+    <!-- Developer -->
+    <div class="about-card developer">
+
+        <div class="developer-avatar">
+            SA
+        </div>
+
+        <h2>Sajjad Ali Javed Ali Shaikh</h2>
+
+        <div class="role">
+            Full-Stack Python Developer
+        </div>
+
+        <p>
+            GenzKart is designed and developed by
+            <strong>Sajjad Ali</strong>, a Full-Stack Python Developer
+            focused on building modern web applications using
+            Python, Django and related technologies.
+        </p>
+
+    </div>
+
+
+    <!-- Technology -->
+    <div class="section-title">
+
+        <h2>Technology Behind GenzKart</h2>
+
+        <p>
+            Built using modern and reliable web technologies.
+        </p>
+
+    </div>
+
+
+    <div class="tech-grid">
+
+        <div class="tech-card">
+            <i class="fab fa-python"></i>
+            <h5>Python</h5>
+            <p>Backend Development</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fas fa-server"></i>
+            <h5>Django</h5>
+            <p>Web Framework</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fas fa-database"></i>
+            <h5>SQLite</h5>
+            <p>Database</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fab fa-html5"></i>
+            <h5>HTML5</h5>
+            <p>Structure</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fab fa-css3-alt"></i>
+            <h5>CSS3</h5>
+            <p>UI & Styling</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fab fa-js"></i>
+            <h5>JavaScript</h5>
+            <p>Interactions</p>
+        </div>
+
+    </div>
+
+
+    <!-- Project -->
+    <div class="project-section">
+
+        <h2>About GenzKart</h2>
+
+        <p>
+            GenzKart is a full-stack e-commerce project created to
+            demonstrate real-world web development concepts including
+            product management, authentication, cart functionality,
+            wishlist management, orders and product search.
+        </p>
+
+        <ul class="feature-list">
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Product & Category Management
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                User Registration & Authentication
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Shopping Cart
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Wishlist System
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Product Search & Autocomplete
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Order Management
+            </li>
+
+            <li>
+                <i class="fas fa-check-circle"></i>
+                Django Admin Dashboard
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="developer-footer">
+
+        <strong>Crafted in Mumbra</strong>
+
+        <br>
+
+        <small>
+            Designed & Developed by Sajjad Ali
+        </small>
+
+    </div>
+
+</div>
+
+{% endblock contentBlock %}
+
+
+{% block scripts %}
+{% endblock scripts %}

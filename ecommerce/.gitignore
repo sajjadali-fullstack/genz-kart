@@ -7,3 +7,12 @@ media/
 note.txt
 uploads
 uploads/
+
+
+data.json
+data_utf8.json
+data_backup_bad_encoding.json
+
+
+# Database backups
+data*.json

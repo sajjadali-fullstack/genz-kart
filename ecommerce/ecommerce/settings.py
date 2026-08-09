@@ -21,7 +21,9 @@ TEMP_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dnho8t7!i&#e4bn4et3hrg9!*i^vz(0i!6b3*qcjwz_&yg7f_@'
+from decouple import config
+
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,21 +77,31 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 # Sabse upar check karlo ye hai na:
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.getenv('DB_NAME'),        # Ye '.env' se 'genzkart' uthayega
+#         'USER': os.getenv('DB_USER'),        # Ye 'root' uthayega
+#         'PASSWORD': os.getenv('DB_PASSWORD'), # Ye 'password' uthayega
+#         'HOST': os.getenv('DB_HOST'),        # Ye 'localhost' uthayega
+#         'PORT': os.getenv('DB_PORT'),        # Ye 'port_number' uthayega
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),        # Ye '.env' se 'genzkart' uthayega
-        'USER': os.getenv('DB_USER'),        # Ye 'root' uthayega
-        'PASSWORD': os.getenv('DB_PASSWORD'), # Ye 'password' uthayega
-        'HOST': os.getenv('DB_HOST'),        # Ye 'localhost' uthayega
-        'PORT': os.getenv('DB_PORT'),        # Ye 'port_number' uthayega
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
