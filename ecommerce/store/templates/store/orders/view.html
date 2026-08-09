@@ -1,9 +1,9 @@
 {% extends 'store/layouts/base.html' %}
 
 
-{% block titleBlock %}
-<title> View Order | GenZKart</title>
-{% endblock titleBlock %}
+<title>
+    {% block title %}{{ product.name }} | GenZKart{% endblock %}
+</title>
 
 
 {% block styleBlock %}

@@ -3,9 +3,9 @@
 
 
 <!-- Title Block -->
-{% block titleBlock %}
-<title>View</title>
-{% endblock titleBlock %}
+<title>
+    {% block title %}{{ product.name }} | GenZKart{% endblock %}
+</title>
 
 <!-- Style Block -->
 {% block styleBlock %}
@@ -62,7 +62,7 @@
         <a href="{%  url 'home' %}" class="text-white text-decoration-none fw-bold">Home / </a>
         <a href="{% url 'collections' %}" class="text-white text-decoration-none fw-bold">Collection /</a>
         <a href="{% url 'collectionsView' products.category.slug %}" class="text-white text-decoration-none fw-bold">{{
-            products.category.name }} / </a>
+            product.category.name }} / </a>
         <a href="{% url 'product_details' products.category.slug products.slug %}"
             class="text-white text-decoration-none fw-bold border-bottom border-2">{{ products.name }}</a>
 
