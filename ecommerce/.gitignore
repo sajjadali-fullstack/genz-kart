@@ -7,7 +7,7 @@ media/
 note.txt
 uploads
 uploads/
-
+staticfiles/
 
 data.json
 data_utf8.json
