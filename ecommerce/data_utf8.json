@@ -1,0 +1,1747 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$NC6I5XiimE81Rn5FatTdc4$yhT30ccbhiACT++TwnOFRsQSolMeuSifPQAJ2V1dn7Y=",
+    "last_login": "2026-08-08T09:03:23.205Z",
+    "is_superuser": true,
+    "username": "django2026",
+    "first_name": "Sajjad Ali",
+    "last_name": "Shaikh",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-14T09:59:38.842Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$CLGIf0AyRHlS4nZbI5Qlny$ApsCWRrBFMV0d9AG2j5HA8BQgxCiU8uxpUK0yq73hco=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "your_sajju",
+    "first_name": "",
+    "last_name": "",
+    "email": "yoursajju61@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-08T17:47:05.667Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bebuLHyId8b84lD3mMkFdV$zQMxRwyzv5zHdiOw5TJtx7X3tAk91oGu4VCMB50E29E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "your_sajju2",
+    "first_name": "",
+    "last_name": "",
+    "email": "yoursajju61@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-08T18:03:52.451Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$UMFQLbBUUm44t88WzxNkte$RbSFeK43qMgGyiIcFMNB9gpCKyJR8I8RkBBC2060A3A=",
+    "last_login": "2026-06-04T04:35:45.279Z",
+    "is_superuser": false,
+    "username": "SajjadAli1974",
+    "first_name": "",
+    "last_name": "",
+    "email": "yoursajju61@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T13:16:30.418Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1wu25n2hnqg8zqi3l02zodmcv6ett8hc",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wFxIz:Uw8lVz5BNJOIs6UOrwQ5xdWAeYki7-eLYBz0KCuxgwA",
+    "expire_date": "2026-05-07T16:53:33.009Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "25h5yktivqhkvwyr36xrpslhwoi5jkg7",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wOtzJ:4aFI6wp9I8Umvm3H7N2BQqTzZ4ZPEvBpKDs72jO4AOE",
+    "expire_date": "2026-06-01T09:10:13.651Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3cjxgbpcoljwkmhgmv0maifmymw1q86p",
+  "fields": {
+    "session_data": "e30:1wNbnc:f5y8ISSjPUTbifOzSh6JLVXRiDDH0gVRxT7_cLbj6fw",
+    "expire_date": "2026-05-28T19:32:48.131Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3yufblwpxqfr04360r4vozu6an91d414",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wCaZk:gtByUMZFJ0PQsQ156iJLaBAhp-Fm1jzY3v0HgBGskEk",
+    "expire_date": "2026-04-28T10:00:56.004Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5noujs69iq3achk80bckn9im65wpc00m",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wM5Ov:UGM5lmpN8m6ZGnAzW-2qENn2zJtBPl8a81T2McbKULQ",
+    "expire_date": "2026-05-24T14:45:01.374Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a2nfqjmx4lsuytaxodqf2ybiajf8m7pq",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wscwY:Y_Nrl6xwoZ7ZuFD0mBoQ638Y3y3HAx1HUV46LHl4K9g",
+    "expire_date": "2026-08-22T09:02:14.169Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e3zedwvscdb2unc8p9mozuct140lcvbu",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCYQBlcuvcMZGCmUjU0Ke3KeHdt0oVu_3vvv1Siba1p67KkidVZOXX63TKVh7Qd8J3abdZlbusyZb0r-qBdX2eW5-Vw_w4q9fqtA0Rro4CJxqEBQLTR8QCWMVLGwtkFEZPHQKNB74GYfA4kcRAUYPX-ALXtN7E:1wM52x:IXP74aZP914LGkD5ul7ZZDSma8whLy2LBWJ5JB2OXvQ",
+    "expire_date": "2026-05-24T14:22:19.578Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e567cdkvvp9zcmgn1sy5zyk3xwdhidh8",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wYiUh:nGaN5PdF5ylae8MKfukPgigK73jMHVE2rRVKuvM8s14",
+    "expire_date": "2026-06-28T10:55:11.263Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ehzfqnj65onhn7810etfkpyrgyycw4jr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCYQBlcuvcMZGCmUjU0Ke3KeHdt0oVu_3vvv1Siba1p67KkidVZOXX63TKVh7Qd8J3abdZlbusyZb0r-qBdX2eW5-Vw_w4q9fqtA0Rro4CJxqEBQLTR8QCWMVLGwtkFEZPHQKNB74GYfA4kcRAUYPX-ALXtN7E:1wNbpE:c3LSlS4KrZ0WA7MfHK2wRtDNZaL9iYb0fI4F4Pg7ioI",
+    "expire_date": "2026-05-28T19:34:28.853Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gghk0x4i98rnk3fddu6st08wr0drg8iq",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCYQBlcuvcMZGCmUjU0Ke3KeHdt0oVu_3vvv1Siba1p67KkidVZOXX63TKVh7Qd8J3abdZlbusyZb0r-qBdX2eW5-Vw_w4q9fqtA0Rro4CJxqEBQLTR8QCWMVLGwtkFEZPHQKNB74GYfA4kcRAUYPX-ALXtN7E:1wOtgX:fjFBlOhm_0RwMW5Ir53zbsGjdgNGbAM0ymUMvI_dvYI",
+    "expire_date": "2026-06-01T08:50:49.952Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "luiva99i4qxwjqk33knlqp0w643v4oej",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCYQBlcuvcMZGCmUjU0Ke3KeHdt0oVu_3vvv1Siba1p67KkidVZOXX63TKVh7Qd8J3abdZlbusyZb0r-qBdX2eW5-Vw_w4q9fqtA0Rro4CJxqEBQLTR8QCWMVLGwtkFEZPHQKNB74GYfA4kcRAUYPX-ALXtN7E:1wUzo1:Xzz1B38jyCrk5oFaYRheGTdr6ov2Qd7Kxu-OSeMHZeo",
+    "expire_date": "2026-06-18T04:35:45.317Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ozr3xl6jr26shpgj7l5tl2cr03lmscuv",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wCaZi:Zx_xoArPE90rBsRcD5pPv00lWi_7T3hOYS0MYk1G_Xg",
+    "expire_date": "2026-04-28T10:00:54.070Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rwgg3yrx2rf0ocab6f914z6anrqu0xz9",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wscxf:1cPl7R9f6cEliQ2zHJfRgs2HOzyKoIyotojKzsPW_T4",
+    "expire_date": "2026-08-22T09:03:23.222Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "syjjvgx0a4o40vtvylinhdym09ehaqyb",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wsIkZ:WVTEcx33lMc4qozfaRDGr-jQ3tKY6ilu5jmm_MQxCUg",
+    "expire_date": "2026-08-21T11:28:31.607Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yk22rahbxzlurouz9p5aq7nz2jcjhs1l",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHLggU8evcbyJYlUjWQlPZk_Hch6UEPk0zmzcxbBNq3HPaW1rCwuAglTr_ZTPGZygD8oHKvMtayrcssR0UetMlb5fS6Ht2_g0wtj7VBiA40RtS-CxCtYkXMyZFH0N2hIZgIvFaarY0Mkc7O0tR3Rny-xk43RA:1wYiUe:s2sFWiWCzxO7ioCU_Dy45FBGnzwZuqj3uLj938JVTBc",
+    "expire_date": "2026-06-28T10:55:08.758Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+    "slug": "mobiles",
+    "name": "Mobiles",
+    "image": "uploads/1550440414155044vivot4pro.png",
+    "description": "Explore the latest smartphones featuring powerful performance, stunning displays, advanced cameras, long-lasting batteries and modern designs. Find smartphones for everyday use, entertainment, gaming and productivity at competitive prices.",
+    "status": false,
+    "trending": true,
+    "meta_title": "Latest Smartphones & Mobiles Online | GenzKart",
+    "meta_keywords": "mobiles, smartphones, latest smartphones, android phones, 5G smartphones, budget smartphones, premium smartphones, GenzKart",
+    "meta_description": "Shop the latest smartphones and mobiles on GenzKart. Discover powerful 5G phones with great cameras, displays, performance and battery life at competitive prices.",
+    "created_at": "2026-04-14T10:20:44.371Z",
+    "updated_at": "2026-04-14T10:20:44.371Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "slug": "oversized-graphic-hoodies",
+    "name": "Oversized & Graphic Hoodies",
+    "image": "uploads/1952260415195226Screenshot_2026-04-15_194724.png",
+    "description": "Level up your street style with our premium collection of oversized hoodies. Featuring high-quality GSM fabric, drop shoulders, and viral graphic prints. Perfect for late-night grinds, cozy chills, or making a statement outdoors. Stay warm, stay aesthetic.",
+    "status": false,
+    "trending": true,
+    "meta_title": "Buy Trendy Oversized Hoodies for Men & Women | GenZKart",
+    "meta_keywords": "oversized hoodies, streetwear india, aesthetic hoodies, drop shoulder sweatshirts, graphic hoodies online, GenZ fashion, baggy hoodies, winter wear",
+    "meta_description": "Shop the latest collection of oversized and graphic hoodies at GenZKart. Premium quality, aesthetic designs, and comfortable fits. Free shipping on all streetwear essentials!",
+    "created_at": "2026-04-14T11:27:27.228Z",
+    "updated_at": "2026-04-14T11:27:27.228Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+    "slug": "audio-and-headphones",
+    "name": "Premium Audio & Headphones",
+    "image": "uploads/1954020415195402headphones.png",
+    "description": "Immerse yourself in pure sound. From noise-canceling over-ears for deep focus to stylish TWS earbuds for on-the-go vibes. Discover high-bass, crystal clear audio, and aesthetic designs that match your setup. Whether it's gaming, music, or podcasts, we’ve got your ears covered.",
+    "status": false,
+    "trending": true,
+    "meta_title": "Best Headphones & Wireless Audio Gear | GenZKart",
+    "meta_keywords": "wireless headphones, bluetooth earbuds, noise canceling headphones, gaming headsets, TWS, audio gear, bass boosted headphones, GenZKart electronics",
+    "meta_description": "Experience high-fidelity sound with GenZKart’s headphone collection. Shop top-rated noise-canceling headphones, gaming headsets, and wireless earbuds. Upgrade your audio game today!",
+    "created_at": "2026-04-15T14:24:02.164Z",
+    "updated_at": "2026-04-15T14:24:02.164Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 7,
+  "fields": {
+    "slug": "college-girls-fashion",
+    "name": "College Girls Pack",
+    "image": "uploads/1955530415195553trendy_.png",
+    "description": "Campus se lekar hangout tak, hamesha on-point rahein! Discover karein trendy baggy jeans, cute crop tops, oversized shirts, aur ethnic fusion wear. Jo comfortable bhi hai aur stylish bhi. Apna perfect campus look yahan se build karein.",
+    "status": false,
+    "trending": true,
+    "meta_title": "Trendy College Fashion for Girls | Campus Essentials | GenZKart",
+    "meta_keywords": "college wear for girls, campus fashion trends, aesthetic college outfits, women streetwear india, kurti with jeans, oversized shirts for women, baggy jeans girls, GenZKart women fashion",
+    "meta_description": "Shop the ultimate college fashion collection for girls at GenZKart. From viral aesthetic outfits to everyday campus essentials. Stay trendy, stay comfortable!",
+    "created_at": "2026-04-15T14:25:35.912Z",
+    "updated_at": "2026-04-15T14:25:35.912Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 8,
+  "fields": {
+    "slug": "tech-setup-essentials",
+    "name": "Tech-Aesthetic & Setup Essentials",
+    "image": "uploads/2016050415201605lighitinroom.png",
+    "description": "Apne workspace ko transform karein! Yahan aapko milenge RGB mousepads, minimalist desk mats, sunset lamps, aur futuristic gadgets jo aapke setup ko \"Instagram-ready\" bana denge. High-performance meets high-aesthetic",
+    "status": false,
+    "trending": true,
+    "meta_title": "Aesthetic Desk Setup & Tech Gadgets Online | GenZKart",
+    "meta_keywords": "desk setup accessories, RGB lights, tech aesthetic, gaming setup india, minimalist workspace, neon signs, cool gadgets for developers, GenZKart tech",
+    "meta_description": "Upgrade your grind with the best tech-aesthetic accessories at GenZKart. Shop premium desk mats, RGB lighting, and viral setup gear to build your dream workspace.",
+    "created_at": "2026-04-15T14:46:05.816Z",
+    "updated_at": "2026-04-15T14:46:05.816Z"
+  }
+},
+{
+  "model": "store.category",
+  "pk": 9,
+  "fields": {
+    "slug": "watches",
+    "name": "Watches",
+    "image": "uploads/1120400809112040watches.avif",
+    "description": "Explore our collection of stylish watches for men and women. From classic vintage digital watches to modern everyday timepieces, find the perfect watch to complete your look.",
+    "status": false,
+    "trending": true,
+    "meta_title": "Watches for Men & Women | GenzKart",
+    "meta_keywords": "watches, watches for men, watches for women, digital watches, vintage watches, Casio watches, stylish watches, GenzKart",
+    "meta_description": "Shop stylish watches for men and women at GenzKart. Discover digital, vintage and everyday watches with classic designs at great prices.",
+    "created_at": "2026-04-16T13:59:27.178Z",
+    "updated_at": "2026-04-16T13:59:27.178Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "category": 5,
+    "slug": "men-full-sleeve-graphic-print-black-sweatshirt",
+    "name": "Full Sleeve Graphic Print Men Sweatshirt",
+    "product_image": "uploads/2326140416232614graphichoodies.png",
+    "small_description": "Premium cotton-blend graphic sweatshirt with full sleeves and comfortable regular fit.",
+    "quantity": 45,
+    "description": "Stay stylish and comfortable with this TOJER premium graphic print sweatshirt. Made from a soft cotton blend fabric, it features a trendy graphic design, full sleeves, and a regular fit. Perfect for casual outings, college wear, or everyday winter style. Includes a practical kangaroo pocket and cuffed sleeves for a modern look.",
+    "original_price": 1299.0,
+    "selling_price": 699.0,
+    "status": false,
+    "trending": true,
+    "tag": "New Arrival, Best Seller",
+    "meta_title": "Buy  Men's Graphic Print Sweatshirt Online - Best Price",
+    "meta_keywords": "weatshirt, graphic print men hoodie, oversized sweatshirt india, men's winter wear, black graphic sweatshirt, street style men fashion",
+    "meta_description": "Get the trendy TOJER Full Sleeve Graphic Print Men Sweatshirt. High-quality fabric, stylish graphics, and comfortable fit. Order now at the best price on GenZKart!",
+    "created_at": "2026-04-16T14:12:25.834Z",
+    "updated_at": "2026-04-16T14:12:25.834Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "slug": "vivo-t4-pro-5g-256gb-12gb-ram",
+    "name": "vivo T4 Pro 5G (12GB RAM, 256GB Storage)",
+    "product_image": "uploads/2027460417202746vivo.png",
+    "small_description": "A high-performance 5G smartphone featuring a Snapdragon 7 Gen 4 processor, 6.77-inch 120Hz Curved AMOLED display, and a massive 6500mAh battery with 90W fast charging.",
+    "quantity": 55,
+    "description": "The vivo T4 Pro 5G is engineered for speed and durability. It boasts a flagship-level 50MP Sony IMX882 OIS main camera paired with a 50MP periscope telephoto lens for stunning 3x optical zoom. With its ultra-slim 7.53mm profile and premium IP69 rating, it offers both style and extreme water/dust resistance. Powered by Android 15 (Funtouch OS), this device ensures smooth multitasking with 12GB of physical RAM and additional Extended RAM support.",
+    "original_price": 36999.0,
+    "selling_price": 31999.0,
+    "status": false,
+    "trending": true,
+    "tag": "Mobile, 5G Smartphone, vivo T Series, 12GB RAM, 256GB Storage",
+    "meta_title": "vivo T4 Pro 5G (12GB RAM, 256GB) - Specs, Price & Features",
+    "meta_keywords": "vivo T4 Pro 5G, vivo T4 Pro price, 12GB RAM mobile, 256GB 5G phone, Snapdragon 7 Gen 4, 6500mAh battery phone.",
+    "meta_description": "Buy the vivo T4 Pro 5G with 12GB RAM and 256GB storage. Features a 50MP Periscope camera, 90W FlashCharge, and IP69 durability. Best price and specs.",
+    "created_at": "2026-04-17T14:57:46.753Z",
+    "updated_at": "2026-04-17T14:57:46.753Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "slug": "motorola-edge-70-fusion-5g",
+    "name": "Motorola Edge 70 Fusion 5G",
+    "product_image": "uploads/2032420417203242moto.png",
+    "small_description": "A sleek, high-performance smartphone featuring a 144Hz pOLED curved display, 50MP Triple Camera system with OIS, and ultra-fast 125W TurboPower charging.",
+    "quantity": 96,
+    "description": "The Motorola Edge 70 Fusion combines flagship aesthetics with powerful performance. It features a MediaTek Dimensity 8000-series chipset, providing seamless 5G connectivity and gaming. The 6.7-inch Endless Edge display offers 10-bit color depth and HDR10+ support. Built for the modern user, it includes a clean, ad-free Hello UI experience and IP68 underwater protection, making it one of the most durable and stylish phones in its segment.",
+    "original_price": 34999.0,
+    "selling_price": 29999.0,
+    "status": false,
+    "trending": true,
+    "tag": "Motorola, 5G, Edge Series, pOLED Display, Fast Charging",
+    "meta_title": "Motorola Edge 70 Fusion 5G - Price, Full Specifications & Features",
+    "meta_keywords": "Motorola Edge 70 Fusion, Moto Edge 70 specs, 144Hz pOLED phone, Moto 5G smartphone, 125W charging mobile.",
+    "meta_description": "Experience the Motorola Edge 70 Fusion 5G. Featuring a stunning 144Hz curved display, 50MP OIS camera, and IP68 water resistance. Shop the latest Moto Edge today.",
+    "created_at": "2026-04-17T15:02:42.359Z",
+    "updated_at": "2026-04-17T15:02:42.359Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "slug": "apple-iphone-17-256gb-lavender",
+    "name": "Apple iPhone 17 (Lavender, 256GB)",
+    "product_image": "uploads/2035000417203500iphone.png",
+    "small_description": "The latest Apple flagship featuring the A19 Bionic chip, a stunning 6.3-inch 120Hz ProMotion display, and an advanced dual 48MP Fusion camera system.",
+    "quantity": 0,
+    "description": "The iPhone 17 in Lavender offers a premium pastel aesthetic with a durable color-infused glass back and Ceramic Shield 2 protection. It is powered by the A19 chip, delivering industry-leading performance and efficiency for Apple Intelligence. The device features a larger 6.3-inch Super Retina XDR OLED display with ProMotion (120Hz) for the first time on a standard model. Capture professional-grade photos with the dual 48MP camera system and the upgraded 18MP Center Stage front camera. With IP68",
+    "original_price": 82900.0,
+    "selling_price": 79990.0,
+    "status": false,
+    "trending": true,
+    "tag": "Apple, iPhone 17, 5G, 256GB, Lavender, iOS 26",
+    "meta_title": "Apple iPhone 17 256GB Lavender - Price, Specs & Features",
+    "meta_keywords": "iPhone 17 Lavender, Apple iPhone 17 256GB, iPhone 17 price in India, A19 Bionic, 120Hz iPhone 17, 48MP Fusion camera.",
+    "meta_description": "Discover the new Apple iPhone 17 in Lavender. Featuring the A19 chip, 6.3-inch ProMotion display, and 256GB storage. Shop the latest iPhone 17 with Apple Intelligence today.",
+    "created_at": "2026-04-17T15:05:00.692Z",
+    "updated_at": "2026-04-17T15:05:00.692Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "category": 5,
+    "slug": "oversized-graphic-black-hoodie",
+    "name": "Oversized brownHoodie",
+    "product_image": "uploads/1102070809110207over-size-1.jpg",
+    "small_description": "Premium oversized graphic hoodie with a relaxed fit, soft fabric and bold streetwear design.",
+    "quantity": 30,
+    "description": "Upgrade your streetwear collection with this premium oversized graphic hoodie. Designed with a relaxed oversized fit, soft and comfortable fabric, ribbed cuffs and a bold graphic print. Perfect for college, casual outings, winter layering and everyday streetwear.",
+    "original_price": 1999.0,
+    "selling_price": 299.0,
+    "status": false,
+    "trending": true,
+    "tag": "Oversized Hoodie",
+    "meta_title": "Oversized Graphic Black Hoodie",
+    "meta_keywords": "oversized hoodie, graphic hoodie, black hoodie, streetwear hoodie, men's hoodie, GenZKart",
+    "meta_description": "Shop premium oversized graphic black hoodies at GenZKart. Relaxed fit, stylish graphic design and comfortable fabric for everyday streetwear.",
+    "created_at": "2026-08-08T20:12:39.021Z",
+    "updated_at": "2026-08-08T20:12:39.021Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "category": 5,
+    "slug": "abegail-anime-graphic-white-tshirt",
+    "name": "Abegail Anime Graphic White Full Sleeve T-Shirt",
+    "product_image": "uploads/1058530809105853over-size-2.jpg",
+    "small_description": "Stylish white full-sleeve graphic T-shirt featuring a bold anime-inspired print and comfortable casual fit.",
+    "quantity": 1225,
+    "description": "Level up your casual streetwear collection with this white full-sleeve graphic T-shirt. Featuring a bold monochrome anime-inspired front print and a clean white base, it delivers a stylish and effortless look. Perfect for college, casual outings, anime fans and everyday streetwear outfits. Pair it with jeans, cargos or sneakers for a modern look.",
+    "original_price": 1299.0,
+    "selling_price": 399.0,
+    "status": false,
+    "trending": true,
+    "tag": "Anime Graphic T-Shirt",
+    "meta_title": "Abegail Anime Graphic White T-Shirt",
+    "meta_keywords": "anime t-shirt, graphic t-shirt, white full sleeve t-shirt, anime streetwear, oversized t-shirt, GenZKart",
+    "meta_description": "Shop the Abegail anime-inspired graphic white full-sleeve T-shirt at GenZKart. A stylish streetwear essential for anime fans and casual everyday outfits.",
+    "created_at": "2026-08-09T05:28:53.359Z",
+    "updated_at": "2026-08-09T05:28:53.359Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "category": 6,
+    "slug": "wireless-noise-cancelling-headphones",
+    "name": "Premium Wireless Noise Cancelling Headphones",
+    "product_image": "uploads/1108380809110838head-phone-1.jpg",
+    "small_description": "Premium wireless over-ear headphones with immersive sound, comfortable ear cushions and modern noise-cancelling design.",
+    "quantity": 20,
+    "description": "Experience immersive audio with these premium wireless over-ear headphones. Designed with comfortable cushioned ear cups, modern controls and a clean minimalist look, they are ideal for music, movies, gaming, travel and everyday listening.",
+    "original_price": 5999.0,
+    "selling_price": 2999.0,
+    "status": false,
+    "trending": false,
+    "tag": "Wireless Headphones",
+    "meta_title": "`Premium Wireless Noise Cancelling Headphones",
+    "meta_keywords": "wireless headphones, noise cancelling headphones, bluetooth headphones, over ear headphones, premium audio, GenZKart",
+    "meta_description": "Shop premium wireless noise cancelling headphones at GenZKart. Enjoy immersive sound, comfortable over-ear design and modern wireless audio.",
+    "created_at": "2026-08-09T05:38:38.634Z",
+    "updated_at": "2026-08-09T05:38:38.634Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "category": 9,
+    "slug": "Watches",
+    "name": "CASIO Vintage A158WA-1DF Digital Watch for Men & Women",
+    "product_image": "uploads/1114360809111436casio-watch.avif",
+    "small_description": "Classic vintage digital watch with stainless steel bracelet, LED backlight, alarm, stopwatch and water resistance.",
+    "quantity": 25,
+    "description": "Casio brings you this stunning timepiece with a style so modish and features so functional that all you would want to do is strap it around your wrist and stay up-to-date. Digital Watch With this watch on your wrist, you won’t have to open your smartphone every time to check the date, day and to set an alarm as this timepiece also comes with a date display, calendar, stopwatch and alarm clock. Contemporary Dial Featuring a contemporary off-white dial encrusted within a chrome plated bezel and co",
+    "original_price": 2499.0,
+    "selling_price": 1899.0,
+    "status": false,
+    "trending": true,
+    "tag": "casio vintage digital watch",
+    "meta_title": "Buy CASIO Vintage A158WA-1DF Digital Watch - Silver Stainless Steel",
+    "meta_keywords": "Casio Vintage, A158WA-1DF, Digital Watch, Silver Stainless Steel Watch, Unisex Casio Watch, Quartz Movement",
+    "meta_description": "Get the timeless CASIO Vintage A158WA-1DF. Featuring a digital display, water resistance, and a sleek silver metallic band. Ideal for men and women.",
+    "created_at": "2026-08-09T05:44:36.148Z",
+    "updated_at": "2026-08-09T05:44:36.148Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "category": 9,
+    "slug": "g-shock-rugged-analog-digital-watch",
+    "name": "G-SHOCK Rugged Analog-Digital Watch",
+    "product_image": "uploads/1119190809111919g-shock.avif",
+    "small_description": "Rugged analog-digital watch with a bold sporty design, durable construction and water-resistant build.",
+    "quantity": 19,
+    "description": "Make a bold statement with this rugged analog-digital watch. Featuring a sporty dial, durable construction, luminous hands and a comfortable strap, it is designed for everyday wear and outdoor-inspired style.",
+    "original_price": 4999.0,
+    "selling_price": 3499.0,
+    "status": false,
+    "trending": true,
+    "tag": "Rugged Sports Watch",
+    "meta_title": "`G-SHOCK Rugged Analog-Digital Watch",
+    "meta_keywords": "G-SHOCK watch, rugged watch, analog digital watch, sports watch, men's watch, stylish watch, GenZKart",
+    "meta_description": "Shop a rugged analog-digital sports watch at GenZKart with a bold design, durable build and everyday styling.",
+    "created_at": "2026-08-09T05:49:19.933Z",
+    "updated_at": "2026-08-09T05:49:19.933Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "category": 7,
+    "slug": "cream-usb-charging-college-backpack",
+    "name": "Premium Cream USB Charging College Backpack",
+    "product_image": "uploads/1126530809112653bags.jpg",
+    "small_description": "Stylish and spacious college backpack with USB charging port, multiple compartments and a comfortable design for everyday use.",
+    "quantity": 25,
+    "description": "Upgrade your everyday college and travel experience with this premium cream-colored backpack. Designed with multiple storage compartments, a convenient USB charging port, front pockets and comfortable shoulder straps, it keeps your essentials organized while maintaining a stylish modern look.\r\n\r\nPerfect for college students, office use and everyday travel. Its lightweight design provides comfortable carrying throughout the day.",
+    "original_price": 1999.0,
+    "selling_price": 999.0,
+    "status": false,
+    "trending": true,
+    "tag": "college backpack, usb backpack, stylish backpack",
+    "meta_title": "Premium USB Charging College Backpack | GenzKart",
+    "meta_keywords": "college backpack, usb charging backpack, student backpack, stylish backpack, laptop backpack, travel backpack, GenzKart",
+    "meta_description": "Shop a stylish premium college backpack with USB charging port, multiple compartments and comfortable straps. Perfect for college, office and everyday travel.",
+    "created_at": "2026-08-09T05:56:53.851Z",
+    "updated_at": "2026-08-09T05:56:53.851Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "category": 7,
+    "slug": "college-girls-makeup-kit",
+    "name": "College Girls Complete Makeup Kit",
+    "product_image": "uploads/1130460809113046mack-up.jpg",
+    "small_description": "Complete makeup kit featuring eyeshadow palettes, blush, brushes, foundation and essential beauty accessories for college girls.",
+    "quantity": 59,
+    "description": "A complete and stylish makeup kit designed for college girls and everyday beauty needs. This versatile set includes colorful eyeshadow palettes, blush shades, makeup brushes, foundation, mascara and other essential beauty accessories.\r\n\r\nPerfect for college events, casual outings, parties and everyday makeup looks. A convenient all-in-one beauty collection for creating different styles with ease.",
+    "original_price": 2499.0,
+    "selling_price": 1299.0,
+    "status": false,
+    "trending": true,
+    "tag": "makeup kit, college girls makeup, beauty kit, cosmetics, makeup accessories",
+    "meta_title": "College Girls Complete Makeup Kit | GenzKart",
+    "meta_keywords": "college girls makeup kit, makeup kit, beauty kit, cosmetics, eyeshadow palette, makeup brushes, GenzKart",
+    "meta_description": "Shop a complete makeup kit for college girls featuring eyeshadow, blush, makeup brushes, foundation and essential beauty accessories for everyday looks.",
+    "created_at": "2026-08-09T06:00:46.116Z",
+    "updated_at": "2026-08-09T06:00:46.116Z"
+  }
+},
+{
+  "model": "store.cart",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "product": 4,
+    "product_qty": 1,
+    "create_at": "2026-08-07T14:47:26.870Z"
+  }
+},
+{
+  "model": "store.cart",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "product": 2,
+    "product_qty": 1,
+    "create_at": "2026-08-07T18:13:52.217Z"
+  }
+},
+{
+  "model": "store.wishlist",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "product": 3,
+    "created_at": "2026-08-06T18:38:44.848Z"
+  }
+},
+{
+  "model": "store.wishlist",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "product": 4,
+    "created_at": "2026-08-06T18:38:48.981Z"
+  }
+},
+{
+  "model": "store.wishlist",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "product": 5,
+    "created_at": "2026-08-06T18:38:52.606Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "fname": "Sajjad",
+    "lname": "Ali",
+    "email": "sajjadali.dev01@gmail.com",
+    "phone": "9892786322",
+    "address": "Mumbra",
+    "city": "Mumbra",
+    "state": "Maharastra",
+    "country": "India",
+    "pincode": "400612",
+    "total_price": 142085.0,
+    "payment_mode": "COD",
+    "payment_id": null,
+    "status": "Pending",
+    "message": null,
+    "tracking_no": "Sajjad3005",
+    "created_at": "2026-08-07T11:30:58.980Z",
+    "updated_at": "2026-08-07T11:30:58.980Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "fname": "Sajjad Ali",
+    "lname": "Shaikh",
+    "email": "sajjadali.dev01@gmail.com",
+    "phone": "9892786322",
+    "address": "Mumbai Maharastra",
+    "city": "Mumbra",
+    "state": "Maharastra",
+    "country": "India",
+    "pincode": "400612",
+    "total_price": 61998.0,
+    "payment_mode": "COD",
+    "payment_id": null,
+    "status": "Pending",
+    "message": null,
+    "tracking_no": "Sajjad9135",
+    "created_at": "2026-08-07T14:47:07.114Z",
+    "updated_at": "2026-08-07T14:47:07.114Z"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 2,
+    "price": 699.0,
+    "quantity": 3
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 1,
+    "product": 4,
+    "price": 29999.0,
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 1,
+    "product": 5,
+    "price": 79990.0,
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 2,
+    "product": 4,
+    "price": 29999.0,
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 2,
+    "product": 3,
+    "price": 31999.0,
+    "quantity": 1
+  }
+},
+{
+  "model": "store.profile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "django2026"
+    ],
+    "phone": "9892786322",
+    "address": "Mumbai Maharastra",
+    "city": "Mumbra",
+    "state": "Maharastra",
+    "country": "India",
+    "pincode": "400612",
+    "created_at": "2026-08-07T14:47:07.087Z",
+    "updated_at": "2026-08-07T14:47:07.087Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-04-14T10:20:44.385Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Vivo T4 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-04-14T10:33:25.361Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Premium Totapari Bakra (Healthy & Active)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-04-14T10:36:32.488Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Premium Kota Bakra (Healthy & Active)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-04-14T10:46:28.575Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "nike red shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-04-14T11:27:27.234Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "all types of goats",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-04-14T11:27:54.917Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "goats",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-04-14T11:30:47.677Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Totapari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-04-15T14:07:35.355Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Mobiles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-04-15T14:08:04.064Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Kota Bakra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-04-15T14:08:35.382Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Totapari Bakra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-04-15T14:08:52.292Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Shoes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-04-15T14:22:26.423Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Oversized & Graphic Hoodies",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Name\", \"Image\", \"Description\", \"Meta title\", \"Meta keywords\", \"Meta description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-04-15T14:24:02.173Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Premium Audio & Headphones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-04-15T14:25:35.920Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Women's College Wear",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-04-15T14:25:53.233Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Women's College Wear",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-04-15T14:46:05.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Tech-Aesthetic & Setup Essentials",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-04-16T13:59:27.228Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "9",
+    "object_repr": "CASIO Vintage A158WA-1DF Digital Watch for Men & Women",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-04-16T14:03:55.474Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Totapari",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-04-16T14:12:25.850Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Full Sleeve Graphic Print Men Sweatshirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-04-16T17:56:14.901Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Full Sleeve Graphic Print Men Sweatshirt",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-04-17T14:57:46.825Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "vivo T4 Pro 5G (12GB RAM, 256GB Storage)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-04-17T15:02:42.359Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "Motorola Edge 70 Fusion 5G",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-04-17T15:05:00.703Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Apple iPhone 17 (Lavender, 256GB)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-04-23T16:54:03.420Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "Motorola Edge 70 Fusion 5G",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Trending\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-05-10T14:49:26.321Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "10",
+    "object_repr": "Blue T-shirts",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-05-10T14:51:22.868Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "11",
+    "object_repr": "Brown Winter Jackets",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-05-10T14:53:56.584Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "12",
+    "object_repr": "Women's Blue Short Jeans",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-05-10T14:55:20.547Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "13",
+    "object_repr": "Light Blue College Bags",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-05-10T14:56:34.553Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "14",
+    "object_repr": "Brown MacBook & Laptop Skins",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-05-10T14:58:25.009Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "15",
+    "object_repr": "Grey Single Seater Sofa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-05-10T14:59:51.716Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "16",
+    "object_repr": "Touch Screen Smartwatch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-08-08T20:12:39.071Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Oversized brownHoodie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-08-09T05:28:53.392Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Abegail Anime Graphic White Full Sleeve T-Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-08-09T05:30:21.479Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Oversized brownHoodie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selling price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-08-09T05:30:51.817Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Oversized brownHoodie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selling price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-08-09T05:32:07.663Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Oversized brownHoodie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-08-09T05:32:45.592Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Oversized brownHoodie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Selling price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-08-09T05:38:38.639Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Premium Wireless Noise Cancelling Headphones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-08-09T05:44:36.153Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "CASIO Vintage A158WA-1DF Digital Watch for Men & Women",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-08-09T05:46:46.103Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "9",
+    "object_repr": "Watches",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Name\", \"Description\", \"Meta title\", \"Meta keywords\", \"Meta description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-08-09T05:49:19.933Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "G-SHOCK Rugged Analog-Digital Watch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-08-09T05:50:40.825Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "9",
+    "object_repr": "Watches",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-08-09T05:51:53.622Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Shoes",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-08-09T05:53:54.762Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Girls College Wear",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-08-09T05:55:16.318Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "College Girls Pack",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-08-09T05:56:53.852Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Premium Cream USB Charging College Backpack",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-08-09T06:00:46.123Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "College Girls Complete Makeup Kit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "15",
+    "object_repr": "Grey Single Seater Sofa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "14",
+    "object_repr": "Brown MacBook & Laptop Skins",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "13",
+    "object_repr": "Light Blue College Bags",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "12",
+    "object_repr": "Women's Blue Short Jeans",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "11",
+    "object_repr": "Brown Winter Jackets",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "10",
+    "object_repr": "Blue T-shirts",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Kota Bakra",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-08-09T06:02:11.833Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Totapari Bakra",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-08-09T06:03:01.657Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "16",
+    "object_repr": "Touch Screen Smartwatch",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-08-09T06:07:17.472Z",
+    "user": [
+      "django2026"
+    ],
+    "content_type": [
+      "store",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Mobiles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Description\", \"Meta title\", \"Meta keywords\", \"Meta description\"]}}]"
+  }
+}
+]
